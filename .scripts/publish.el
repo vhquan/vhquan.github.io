@@ -278,7 +278,7 @@ PROJECT  The project structure.
 SITEMAP-FILENAME  The filename to use as the default index."
   (let* ((base (file-name-sans-extension (or sitemap-filename "index.org")))
          (root (file-name-as-directory (expand-file-name
-                                        (concat sfoj-org-dir "blog/"))))
+                                        (concat sfoj-org-dir "posts/"))))
          (title (or (org-publish-property :sitemap-title project)
                     (concat "Sitemap for project " (car project))))
          (sort-predicate
@@ -298,6 +298,7 @@ SITEMAP-FILENAME  The filename to use as the default index."
         (let ((fname (if (eq 0 page-number)
                          (concat root (format "%s.org" base))
                        (concat root (format "%s_%d.org" base page-number))))
+
               (previous-page (cond ((eq 0 page-number) nil)
                                    ((eq 1 page-number) (concat root (format "%s.org" base)))
                                    (t (concat root (format "%s_%d.org" base (- page-number 1))))))
@@ -316,7 +317,7 @@ SITEMAP-FILENAME  The filename to use as the default index."
 (setq org-publish-timestamp-directory (concat sfoj-project-dir "cache/"))
 (setq org-publish-project-alist
       `(("sfoj"
-         :components ("blog" "pages" "res" "images"))
+         :components ("blog" "pages" "resources" "images"))
 
         ("blog"
          :base-directory ,sfoj-blog-org-dir
@@ -349,7 +350,7 @@ SITEMAP-FILENAME  The filename to use as the default index."
          :html-postamble ,sfoj-footer
          :auto-sitemap t
          :sitemap-filename "index.org"
-         :sitemap-title "Who made the rules ∴ A blog for a lazy boy"
+         :sitemap-title "ls /home/quan/blog/"
          :sitemap-sort-files anti-chronologically)
 
         ("pages"
@@ -378,12 +379,11 @@ SITEMAP-FILENAME  The filename to use as the default index."
          :html-head-include-default-style nil
          :html-head-include-scripts nil
          :html-link-up ""
-         :html-link-home ""
          :html-preamble sfoj--header
          :html-postamble ,sfoj-footer
          :html-viewport nil)
 
-        ("res"
+        ("resources"
          :base-directory ,sfoj-org-dir
          :base-extension "css\\|js\\|woff2\\|woff\\|ttf"
          :recursive t
