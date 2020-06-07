@@ -3,7 +3,7 @@
 
 all: publish
 
-publish: scripts/publish.el
+publish: .scripts/publish.el
 	@echo "Publishing ... with current Emacs configuration."
 	emacs --batch --load .scripts/publish.el --load .scripts/htmlize.el --funcall org-publish-all
 
