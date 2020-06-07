@@ -1,0 +1,7 @@
+#+title: Contact
+
+I lurk about in many places on the Internet. This is a short list of easy ways to get a hold of me.
+
+- *Email* :: [[mailto:vuhongquanbk97@gmail.com][vuhongquanbk97@gmail.com]]
+- *Github* :: [[https://github.com/vhquan][vhquan]]
+- *LinkedIn* :: [[https://www.linkedin.com/in/vhquan/][vhquan]]
