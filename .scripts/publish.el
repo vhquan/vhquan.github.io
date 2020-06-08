@@ -379,6 +379,7 @@ SITEMAP-FILENAME  The filename to use as the default index."
          :html-head-include-default-style nil
          :html-head-include-scripts nil
          :html-link-up ""
+         :html-link-home ""
          :html-preamble sfoj--header
          :html-postamble ,sfoj-footer
          :html-viewport nil)
