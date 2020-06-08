@@ -1,4 +1,4 @@
-#+TITLE: ls /home/quan/blog/
+#+TITLE: Man's Search for Meaning
 
 #+BEGIN_pagination
 - 
