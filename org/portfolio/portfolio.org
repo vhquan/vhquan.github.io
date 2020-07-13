@@ -3,7 +3,4 @@
 * Academic Projects
 - *License Plate Recognition*: Developing a program that process an image contains licence plate number, using OpenCV library to processing image and detect license number.
 - *Wall-following control of a mobile robot using the fuzzy controller*: Create a mobile robot follow wall using a fuzzy logic controller (FLC), based on sensorial information given by two ultrasonic sensor.
-- *Object tracking for mobile robot*: This project proposed the real-time (nearly) tracking algorithm in the active camera system, which based on the intelligent method (in this using fuzzy logic controller).
-To seperate object from background, the similarity of the color is analyzed through the HSV space and image filter (create a mask based on color value was selected by user then multiple it with origin image). 
-After segmentation, the coordinate of object in frame will be sent to the fuzzy controller where it is used to track the moving object. This experiment is performed using the developed embedded system with an 
-ARM chip, IP camera, LoRA.
+- *Object tracking for mobile robot*: This project proposed the real-time (nearly) tracking algorithm in the active camera system, which based on the intelligent method (in this using fuzzy logic controller). To seperate object from background, the similarity of the color is analyzed through the HSV space and image filter (create a mask based on color value was selected by user then multiple it with origin image). After segmentation, the coordinate of object in frame will be sent to the fuzzy controller where it is used to track the moving object. This experiment is performed using the developed embedded system with an ARM chip, IP camera, LoRA.

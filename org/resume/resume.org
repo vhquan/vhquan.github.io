@@ -1,11 +1,15 @@
 #+title: Hong Quan-Vu
 
 Linkedin: [[https://www.linkedin.com/in/vhquan]]
+
 Github: [[https://github.com/vhquan]]
+
 Email: [[mailto:vuhongquanbk97@gmail.com][vuhongquanbk97@gmail.com]]
 
-* Education
+* Education & Achivements
+** Tran Hung Dao High School
+- First prize in Ho Chi Minh City Excellent Student (Top 10) (Subject: Math)
+- Achieve Math: 9.75/10, Chemistry: 9.8/10, Physics: 8.5/10 in the College Entrance Examination (2015)
 ** Ho Chi Minh City University of Technology (HCMUT) aka Bach Khoa University
-- Location: District 10, Ho Chi Minh City
 - Bachelor of Electrical & Electronics Engineering (*Honors Program*): Sep 2015 - Nov 2019
 - Majoring in Automation Control
