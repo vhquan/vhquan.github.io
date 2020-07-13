@@ -350,7 +350,7 @@ SITEMAP-FILENAME  The filename to use as the default index."
          :html-postamble ,sfoj-footer
          :auto-sitemap t
          :sitemap-filename "index.org"
-         :sitemap-title "Man's Search for Meaning"
+         :sitemap-title "Quan Vu"
          :sitemap-sort-files anti-chronologically)
 
         ("pages"
