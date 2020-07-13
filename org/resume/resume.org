@@ -1,3 +1,11 @@
-#+title: Quan
+#+title: Hong Quan-Vu
 
-Will be updated soon!!!
+Linkedin: [[https://www.linkedin.com/in/vhquan]]
+Github: [[https://github.com/vhquan]]
+Email: [[mailto:vuhongquanbk97@gmail.com][vuhongquanbk97@gmail.com]]
+
+* Education
+** Ho Chi Minh City University of Technology (HCMUT) aka Bach Khoa University
+- Location: District 10, Ho Chi Minh City
+- Bachelor of Electrical & Electronics Engineering (*Honors Program*): Sep 2015 - Nov 2019
+- Majoring in Automation Control
