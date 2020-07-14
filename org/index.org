@@ -1,1 +1,3 @@
-[[https://vhquan.github.io/.images/wall2.jpg]]
+#+title: QuanNotes: THE BLOG OF QUAN VU
+
+[[https://vhquan.github.io/.images/west-lake-2.jpg]]
