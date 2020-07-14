@@ -325,7 +325,7 @@ SITEMAP-FILENAME  The filename to use as the default index."
          :publishing-directory ,sfoj-blog-www-dir
          :publishing-function org-html-publish-to-html
          :with-author t
-         :author "Quan"
+         :author "Quan Vu"
          :email "vuhongquanbk97@gmail.com"
          :with-creator nil
          :with-date t
@@ -350,7 +350,7 @@ SITEMAP-FILENAME  The filename to use as the default index."
          :html-postamble ,sfoj-footer
          :auto-sitemap t
          :sitemap-filename "index.org"
-         :sitemap-title "Quan Vu"
+         :sitemap-title "Posts"
          :sitemap-sort-files anti-chronologically)
 
         ("pages"
@@ -366,7 +366,7 @@ SITEMAP-FILENAME  The filename to use as the default index."
          :with-drawers t
          :with-sub-superscript nil
          :with-author t
-         :author "Quan"
+         :author "Quan Vu"
          :email "vuhongquanbk97@gmail.com"
          :html-html5-fancy t
          :with-creator nil

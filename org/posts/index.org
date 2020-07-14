@@ -1,4 +1,4 @@
-#+TITLE: Quan Vu
+#+TITLE: Posts
 
 #+BEGIN_pagination
 - 
