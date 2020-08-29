@@ -3,7 +3,7 @@
 
 #+BEGIN_more
 Originally the word "broadband" had a technical meaning, but became a marketing term for any kind of relatively high-speed computer network or internet access technology.
-#+END_more
+#+END
 
-According to the 802.16-2004 standard, broadband means "having instantaneous bandwidths greater than 1MHz and supporting data rates greater than about 1.5Mbps. The Federal Communications Commission (FCC) recently 
+According to the 802.16-2004 standard, broadband means "having instantaneous bandwidths greater than 1MHz and supporting data rates greater than about 1.5Mbps. The Federal Communications Commission (FCC) recently
 re-defined the definition to mean download speeds at least 25Mbps and upload speeds of at least 3Mbps.
