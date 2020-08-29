@@ -5,22 +5,16 @@
 - 
 #+END_pagination
 
-* [[file:hello_world.org][Hello world]]
+* [[file:term-broadband.org][The term "broadband"]]
   :PROPERTIES:
-  :PUBDATE: <2020-06-07 Sun 15:39>
+  :PUBDATE: <2020-08-29 Sat 11:15>
   :END:
 #+BEGIN_published
-Sunday, June  7 2020 at  3:39 PM +07
+Saturday, August 29 2020 at 11:15 AM +07
 #+END_published
 
-* Hello, world
-** Hello, world is the first program in programming language
 
-#+BEGIN_SRC c
-#include <stdio.h>
 
-int main(int argc, char *argv[]){
-    printf("Hello, world!!!\n");
-    return 0;
-}
-#+END_SRC
+#+BEGIN_morelink
+[[file:term-broadband.org][Read More →]]
+#+END_morelink
