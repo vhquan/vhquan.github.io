@@ -5,6 +5,40 @@
 - 
 #+END_pagination
 
+* [[file:install-gohu-font.org][Install Gohu Font (Pixel Font)]]
+  :PROPERTIES:
+  :PUBDATE: <2020-08-30 Sun 07:06>
+  :END:
+#+BEGIN_published
+Sunday, August 30 2020 at  7:06 AM +07
+#+END_published
+
+[[https://font.gohu.org][Gohu]]
+
+* Enable bitmap font on Ubuntu
+#+BEGIN_SRC
+sudo rm /etc/fonts/conf.d/70-no-bitmap.conf
+sudo fc-cache -f -v
+#+END_SRC
+
+* Download Gohu font
+Uncompressed it to =~/.fonts= then run =fc-cache -f -v= to update font to the system. Use it!!!
+
+* [[file:lte-term.org][LTE (telecommunication)]]
+  :PROPERTIES:
+  :PUBDATE: <2020-08-29 Sat 16:43>
+  :END:
+#+BEGIN_published
+Saturday, August 29 2020 at  4:43 PM +07
+#+END_published
+
+*In telecommunicatio*, *Long-Term Evolution (LTE)* is a standard for wireless broadband communication for mobile devices and data terminals, based on the GSM/EDGE and UMTS/HSPA technologies. It increases the capacity and speed using a 
+different radio interface together with core network improvements.
+
+LTE stands for Long Term Evolution and is a registered trademark owned by ETSI (European Telecommunication Standard Institute) for the wireless data communications technology and a development of the GSM/UMTS standards. However, other nations and companies do play an active role in the LTE project. The goal of 
+LTE was to increase the capacity and speed of wireless data networks using new DSP (digital signal processing) techniques and modulations that were developed around the turn of the millennium. A further goal was the redesign and simplification fo the network architecture to an IP-based system with significantly 
+reduced transfer latency compared with the 3G architecture. The LTE wireless interface is incompatible with 2G and 3G networks, so that it must be operated on a separate radio spectrum.
+
 * [[file:term-broadband.org][The term "broadband"]]
   :PROPERTIES:
   :PUBDATE: <2020-08-29 Sat 11:15>
