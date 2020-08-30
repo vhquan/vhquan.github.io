@@ -8,6 +8,8 @@
 sudo rm /etc/fonts/conf.d/70-no-bitmap.conf
 sudo fc-cache -f -v
 #+END_SRC
+#+BEGIN_more
+#+END_more
 
 * Download Gohu font
 Uncompressed it to =~/.fonts= then run =fc-cache -f -v= to update font to the system. Use it!!!

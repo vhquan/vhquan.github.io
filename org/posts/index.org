@@ -21,8 +21,11 @@ sudo rm /etc/fonts/conf.d/70-no-bitmap.conf
 sudo fc-cache -f -v
 #+END_SRC
 
-* Download Gohu font
-Uncompressed it to =~/.fonts= then run =fc-cache -f -v= to update font to the system. Use it!!!
+
+#+BEGIN_morelink
+[[file:install-gohu-font.org][Read More →]]
+#+END_morelink
+
 
 * [[file:lte-term.org][LTE (telecommunication)]]
   :PROPERTIES:
@@ -35,9 +38,11 @@ Saturday, August 29 2020 at  4:43 PM +07
 *In telecommunicatio*, *Long-Term Evolution (LTE)* is a standard for wireless broadband communication for mobile devices and data terminals, based on the GSM/EDGE and UMTS/HSPA technologies. It increases the capacity and speed using a 
 different radio interface together with core network improvements.
 
-LTE stands for Long Term Evolution and is a registered trademark owned by ETSI (European Telecommunication Standard Institute) for the wireless data communications technology and a development of the GSM/UMTS standards. However, other nations and companies do play an active role in the LTE project. The goal of 
-LTE was to increase the capacity and speed of wireless data networks using new DSP (digital signal processing) techniques and modulations that were developed around the turn of the millennium. A further goal was the redesign and simplification fo the network architecture to an IP-based system with significantly 
-reduced transfer latency compared with the 3G architecture. The LTE wireless interface is incompatible with 2G and 3G networks, so that it must be operated on a separate radio spectrum.
+
+#+BEGIN_morelink
+[[file:lte-term.org][Read More →]]
+#+END_morelink
+
 
 * [[file:term-broadband.org][The term "broadband"]]
   :PROPERTIES:

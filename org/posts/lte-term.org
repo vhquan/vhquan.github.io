@@ -3,6 +3,8 @@
 
 *In telecommunicatio*, *Long-Term Evolution (LTE)* is a standard for wireless broadband communication for mobile devices and data terminals, based on the GSM/EDGE and UMTS/HSPA technologies. It increases the capacity and speed using a 
 different radio interface together with core network improvements.
+#+BEGIN_more
+#+END_more
 
 LTE stands for Long Term Evolution and is a registered trademark owned by ETSI (European Telecommunication Standard Institute) for the wireless data communications technology and a development of the GSM/UMTS standards. However, other nations and companies do play an active role in the LTE project. The goal of 
 LTE was to increase the capacity and speed of wireless data networks using new DSP (digital signal processing) techniques and modulations that were developed around the turn of the millennium. A further goal was the redesign and simplification fo the network architecture to an IP-based system with significantly 
