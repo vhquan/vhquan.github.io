@@ -3,7 +3,7 @@
 <head>
 <!-- 2020-09-01 Tue 18:49 -->
 <meta charset="utf-8">
-<title>The term "broadband"</title>
+<title>Set up a computer run linux OS go to Internet on LAN cable by hand</title>
 <meta name="generator" content="Org mode">
 <meta name="author" content="Quan Vu">
 <meta name="twitter:site" content="@null" />
@@ -29,17 +29,27 @@
 </div>
 <div id="content">
 <header>
-<h1 class="title">The term "broadband"</h1>
+<h1 class="title">Set up a computer run linux OS go to Internet on LAN cable by hand</h1>
 </header><p>
-Originally the word "broadband" had a technical meaning, but became a marketing term for any kind of relatively high-speed computer network or internet access technology.
+Check status of hardware adapter network is what? <code>ip link show</code>
 </p>
 <div class="more">
 
 </div>
+<p>
+Then check ip of machine by using <code>ifconfig</code>
+</p>
 
 <p>
-According to the 802.16-2004 standard, broadband means "having instantaneous bandwidths greater than 1MHz and supporting data rates greater than about 1.5Mbps. The Federal Communications Commission (FCC) recently
-re-defined the definition to mean download speeds at least 25Mbps and upload speeds of at least 3Mbps.
+To <code>UP</code> adapter network, using <code>ifconfig interface-name up</code>, check again <code>ip link show</code>. Then you have to allocate an IP address, &#x2026;v for the computer &#x2014;&gt; <code>dhclient interface-name</code>.
+</p>
+
+<p>
+Check internet connection &#x2014;&gt; <code>ping www.google.com</code> or <code>ping 8.8.8.8</code>
+</p>
+
+<p>
+Hehe.
 </p>
 </div>
 <div id="postamble" class="status">

@@ -5,6 +5,22 @@
 - 
 #+END_pagination
 
+* [[file:setup-lan-network-to-internet-by-hand.org][Set up a computer run linux OS go to Internet on LAN cable by hand]]
+  :PROPERTIES:
+  :PUBDATE: <2020-09-01 Tue 18:45>
+  :END:
+#+BEGIN_published
+Tuesday, September  1 2020 at  6:45 PM +07
+#+END_published
+
+Check status of hardware adapter network is what? =ip link show=
+
+
+#+BEGIN_morelink
+[[file:setup-lan-network-to-internet-by-hand.org][Read More →]]
+#+END_morelink
+
+
 * [[file:install-gohu-font.org][Install Gohu Font (Pixel Font)]]
   :PROPERTIES:
   :PUBDATE: <2020-08-30 Sun 07:06>

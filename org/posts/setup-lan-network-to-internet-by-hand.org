@@ -1,0 +1,13 @@
+#+title: Set up a computer run linux OS go to Internet on LAN cable by hand
+#+date: <2020-09-01 Tue 18:45>
+
+Check status of hardware adapter network is what? =ip link show=
+#+BEGIN_more
+#+END_more
+Then check ip of machine by using =ifconfig=
+
+To =UP= adapter network, using =ifconfig interface-name up=, check again =ip link show=. Then you have to allocate an IP address, ...v for the computer ---> =dhclient interface-name=.
+
+Check internet connection ---> =ping www.google.com= or =ping 8.8.8.8=
+
+Hehe.
