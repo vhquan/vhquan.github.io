@@ -1,0 +1,25 @@
+#+title: Radio Access Network (RAN)
+#+date: <2020-09-02 Wed 13:45>
+
+*A radio access network (RAN) is part of a mobile telecommunication system. It implements a radio access technology. Conceptually, it resides between a device such as a mobile phone, a computer, or any remotely controlled machine and provides connection with its core network (CN)*
+#+BEGIN_more
+#+END_more
+
+Depending on the standard, mobile phones and other wireless connected devices are varyingly known as user equipment (UE), teminal equipment, mobile station (MS), etc. RAN functionality is typically provided by a silicon chip residing in both the core network as well as the user equipment. See the following diagram:
+
+#+BEGIN_SRC
+         CN
+        /  \
+       /    \
+     RAN    RAN
+     / \    / \
+    UE UE  UE UE
+#+END_SRC
+Examples of radio access network types are:
+
+- GRAN: GSM radio access network.
+- GERAN: essentially the same as GRAN but specifying the inclusion of EDGE packet radio services.
+- UTRAN: UMTS radio access network.
+- E-UTRAN: The Long-Term Evolution (LTE) high speed and how latency radio access network.
+
+It is also possible for a single handset/phone to be simultaneously connected to multiple radio access networks. Handsets capable of this are sometimes called dual-mode handsets. For instance it is common for handsets to support both GSM and UMTS (a.k.a "3G") radio access technologies. Such devices seamlessly transfer an ongoing call between different radio access network without the user noticing any disruption in service.
