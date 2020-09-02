@@ -1,0 +1,16 @@
+#+title: Core Network
+#+date: <2020-09-02 Wed 14:23>
+
+In telecommunication, the core network is the central element of a network that provides services to customers who are connected by the access network.
+#+BEGIN_more
+#+END_more
+There are a number of services that the core network provides, but one of the main functions is to route telephone calls across the PSTN (public switched telephone network). Typically, in telecommunication networks, the term "core" is used by service providers and refers to the high capacity communication 
+facilities that connect primary nodes. A core/backbone network network provides paths for the exchange of information between different sub-networks.
+
+Core/Backbone networks usually have a mesh topology that provides any-to-any connections among devices on the network. Many service providers would have their own core/backbone networks that are interconnected. Some large enterprises have their own core/backbone network, which are typically connected to the 
+public networks.
+
+The devices and facilities in the core/backbone networks are switches and routes such as the Ericsson AXD 301 and Siemens EWSD. The trend is to keep the core devices fast, but not particularly 'clever', leaving the devices with the intelligence and decision making in the access and edge ares of the network. Technologies 
+used in the core and backbone facilities are data link layer and network layer technologies such as SONET, DWDM, ATM, IP, etc. For enterprise backbone network, Gigabit Ethernet 10 Gigabit Ethernet Technologies are also often used.
+
+[[https://www.carritech.com/news/core-networks/]]

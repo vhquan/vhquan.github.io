@@ -3,7 +3,7 @@
 <head>
 <!-- 2020-09-02 Wed 14:49 -->
 <meta charset="utf-8">
-<title>Set up a computer run linux OS go to Internet on LAN cable by hand</title>
+<title>Core Network</title>
 <meta name="generator" content="Org mode">
 <meta name="author" content="Quan Vu">
 <meta name="twitter:site" content="@null" />
@@ -29,27 +29,30 @@
 </div>
 <div id="content">
 <header>
-<h1 class="title">Set up a computer run linux OS go to Internet on LAN cable by hand</h1>
+<h1 class="title">Core Network</h1>
 </header><p>
-Check status of hardware adapter network is what? <code>ip link show</code>
+In telecommunication, the core network is the central element of a network that provides services to customers who are connected by the access network.
 </p>
 <div class="more">
 
 </div>
 <p>
-Then check ip of machine by using <code>ifconfig</code>
+There are a number of services that the core network provides, but one of the main functions is to route telephone calls across the PSTN (public switched telephone network). Typically, in telecommunication networks, the term "core" is used by service providers and refers to the high capacity communication 
+facilities that connect primary nodes. A core/backbone network network provides paths for the exchange of information between different sub-networks.
 </p>
 
 <p>
-To <code>UP</code> adapter network, using <code>ifconfig interface-name up</code>, check again <code>ip link show</code>. Then you have to allocate an IP address, &#x2026;v for the computer &#x2014;&gt; <code>dhclient interface-name</code>.
+Core/Backbone networks usually have a mesh topology that provides any-to-any connections among devices on the network. Many service providers would have their own core/backbone networks that are interconnected. Some large enterprises have their own core/backbone network, which are typically connected to the 
+public networks.
 </p>
 
 <p>
-Check internet connection &#x2014;&gt; <code>ping www.google.com</code> or <code>ping 8.8.8.8</code>
+The devices and facilities in the core/backbone networks are switches and routes such as the Ericsson AXD 301 and Siemens EWSD. The trend is to keep the core devices fast, but not particularly 'clever', leaving the devices with the intelligence and decision making in the access and edge ares of the network. Technologies 
+used in the core and backbone facilities are data link layer and network layer technologies such as SONET, DWDM, ATM, IP, etc. For enterprise backbone network, Gigabit Ethernet 10 Gigabit Ethernet Technologies are also often used.
 </p>
 
 <p>
-Hehe.
+<a href="https://www.carritech.com/news/core-networks/">https://www.carritech.com/news/core-networks/</a>
 </p>
 </div>
 <div id="postamble" class="status">

@@ -5,6 +5,22 @@
 - 
 #+END_pagination
 
+* [[file:core-network.org][Core Network]]
+  :PROPERTIES:
+  :PUBDATE: <2020-09-02 Wed 14:23>
+  :END:
+#+BEGIN_published
+Wednesday, September  2 2020 at  2:23 PM +07
+#+END_published
+
+In telecommunication, the core network is the central element of a network that provides services to customers who are connected by the access network.
+
+
+#+BEGIN_morelink
+[[file:core-network.org][Read More →]]
+#+END_morelink
+
+
 * [[file:RAN-concept.org][Radio Access Network (RAN)]]
   :PROPERTIES:
   :PUBDATE: <2020-09-02 Wed 13:45>
