@@ -14,3 +14,5 @@ The devices and facilities in the core/backbone networks are switches and routes
 used in the core and backbone facilities are data link layer and network layer technologies such as SONET, DWDM, ATM, IP, etc. For enterprise backbone network, Gigabit Ethernet 10 Gigabit Ethernet Technologies are also often used.
 
 [[https://www.carritech.com/news/core-networks/]]
+
+[[https://en.wikipedia.org/wiki/Backbone_network]]
