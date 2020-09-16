@@ -5,6 +5,22 @@
 - 
 #+END_pagination
 
+* [[file:rat-concept.org][Radio Access Technology (RAT)]]
+  :PROPERTIES:
+  :PUBDATE: <2020-09-02 Wed 16:17>
+  :END:
+#+BEGIN_published
+Wednesday, September  2 2020 at  4:17 PM +07
+#+END_published
+
+A Radio Access Technology (RAT) is the underlying physical connection method for a radio based communication network. 
+
+
+#+BEGIN_morelink
+[[file:rat-concept.org][Read More →]]
+#+END_morelink
+
+
 * [[file:core-network.org][Core Network]]
   :PROPERTIES:
   :PUBDATE: <2020-09-02 Wed 14:23>

@@ -1,0 +1,12 @@
+#+title: Radio Access Technology (RAT)
+#+date: <2020-09-02 Wed 16:17>
+
+A Radio Access Technology (RAT) is the underlying physical connection method for a radio based communication network. 
+#+BEGIN_more
+#+END_more
+Many modern mobile phones support several RATS in one device such as Bluetooth, Wi-Fi and GSM, UMTS, LTE or 5G NR.
+
+The term RAT was traditionally used in mobile communication network interoperability.
+
+The term is used when a user device selects between the type of RAT being used to connect to the Internet. This is often 
+performed similar to access point selection in IEEE 802.11 (Wi-Fi) based networks.
