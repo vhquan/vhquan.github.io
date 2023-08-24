@@ -1,0 +1,18 @@
+#+TITLE: Org Mode RFC XML Exporter
+#+AUTHOR: Quan Vu
+#+EMAIL: vuhongquanbk97@gmail.com
+#+OPTIONS: ':t toc:t author:t email:t
+#+LANGUAGE: en
+
+#+TEXINFO_FILENAME: ox-rfc.info
+#+TEXINFO_HEADER: @syncodeindex pg cp
+#+TEXINFO_DIR_CATEGORY: Emacs
+#+TEXINFO_DIR_TITLE: Org RFC XML Export: (ox-rfc)
+#+TEXINFO_DIR_DESC: Exporting Org to IETF RFC XML format
+
+#+begin_abstract
+Abstract
+#+end_abstract
+
+* Heading 
+Content

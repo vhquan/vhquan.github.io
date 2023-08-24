@@ -1,0 +1,5 @@
+xml2rfc (install through python-pip)
+ox-rfc.el (emacs script)
+
+References:
+1. https://github.com/choppsv1/org-rfc-export

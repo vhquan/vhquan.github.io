@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="rfc2629.xslt"?>
+<?rfc toc="yes"?>
+<?rfc compact="no"?>
+<?rfc subcompact="no"?>
+<?rfc symrefs="yes" ?>
+<?rfc sortrefs="yes"?>
+<?rfc iprnotified="no"?>
+<?rfc strict="yes"?>
+<rfc ipr="trust200902"
+     category="std"
+     docName="memory_addressing-00"     submissionType="IETF"
+    consensus="true"    tocInclude="true"    version="3">
+  <front>
+    <title abbrev="Memory Addressing">Memory Addressing</title>
+<author initials='Q.' surname='Vu' fullname='Quan Vu'><address><email>vuhongquanbk97@gmail.com</email></address></author>  <date/><abstract><t>The memory of a computer system consists of tiny electronics switches, with each switch in one of two states: open or closed. It is, however, more convenient to think of these states as 0 and 1, rather than open and closed. Thus, each switch can represent a bit. The memory unit consists of millions of such bits. In order to make memory more manageable, eight bits are grouped into a byte. Memory can then be viewed as consisting of an ordered sequence of bytes. Each byte in this memory is identified by its sequence number starting with 0.</t></abstract>  </front>  <middle>
+
+<section title="Memory chip">
+<t>It is possible to visualize a typical internal main memory structure as consisting of rows and columns of basic cells. Each cell is capable of storing one bit of information.</t>
+
+</section>
+
+<section title="16-Byte Ordering">
+<t>Storing data often requires more than a byte. For example, we need four bytes of memory to store an integer variable that can take a value between 0 and 2<sup>32</sup> - 1. 
+Suppose that we want to store these 4-byte data in memory at locations 100 through 103. How do we store them?</t>
+
+</section>
+</middle><back>  </back>
+</rfc>
