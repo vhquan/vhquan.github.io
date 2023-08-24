@@ -1,0 +1,9 @@
+* MEMORY ADDRESSING
+
+THe memory of a computer system consists of tiny electronic switches, with
+each switch in one of two states: open or closed. It is, however, more
+convenient to think of these states as 0 and 1, rather than open and closed.
+Thus, each switch can represent a bit. The memory unit consists of millions of
+such bits. In order to make memory more manageable, eight bits are grouped
+into a byte. Memory can then be viewed as consisting of an ordered sequence of
+bytes. 

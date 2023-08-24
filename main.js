@@ -31,7 +31,7 @@ const getFileList = (dir, ext) => {
     return files;
 }
 
-const files = getFileList('./build', '.html');
+const files = getFileList('./posts', '.txt');
 
 for (const file of files) {
     html += `
