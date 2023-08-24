@@ -15,7 +15,7 @@ let html = `
 <ul class="post-list">
 `
 
-const getFileList = (dir) => {
+const getFileList = (dir, ext) => {
     let files = [];
     const items = fs.readdirSync(dir, { withFileTypes: true });
 
@@ -23,7 +23,7 @@ const getFileList = (dir) => {
         if (item.isDirectory()) {
             files = [...files, ...getFileList(`${dir}/${item.name}`)];
         } else {
-            if (path.extname(item.name) === '.txt')
+            if (path.extname(item.name) === ext)
                 files.push(`${dir}/${item.name}`);
         }
     }
@@ -31,7 +31,7 @@ const getFileList = (dir) => {
     return files;
 }
 
-const files = getFileList('./build');
+const files = getFileList('./build', '.html');
 
 for (const file of files) {
     html += `
