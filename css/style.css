@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500&display=swap');
+
+body {
+    font-family: 'Fira Mono', monospace;
+    display: flex;
+    flex-direction: column;
+    max-width: 420px;
+    padding: 32px;
+    margin: 60px auto;
+    border: 1px solid #eee;
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.06);
+}
+
+h1 {
+    font-size: 20px;
+}
+
+li {
+    color: #4F4F4F;
+    position: relative;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+strong {
+    color: #292929;
+}
+
+ul.alternating-colors {
+    li:nth-child(odd):before {
+        border-color: #0BAD02;
+    }
+
+    li:nth-child(even):before {
+        border-color: #2378D5;
+    }
+}
