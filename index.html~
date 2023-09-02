@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-09-02 T7 20:20 -->
+<!-- 2023-08-27 CN 12:55 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Secret notes</title>
@@ -12,14 +12,10 @@
 <link rel="stylesheet" href="css/style.css" type="text/css"/>
 </head>
 <body>
-<div id="org-div-home-and-up">
- <a accesskey="h" href=""> UP </a>
- |
- <a accesskey="H" href="/"> HOME </a>
-</div><div id="content">
+<div id="content">
 <h1 class="title">Secret notes</h1>
 <ul class="org-ul">
-<li>2023-09-02 - <a href="concepts/IPC.html">Inter Process Communication (IPC)</a></li>
+<li><a href="write_a_blog_with_emacs.html">What Makes a Blog</a></li>
 </ul>
 </div>
 <div id="postamble" class="status">

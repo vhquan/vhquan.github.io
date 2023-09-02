@@ -1,0 +1,3 @@
+#+TITLE: Secret notes
+
+- 2023-09-02 - [[file:concepts/IPC.org][Inter Process Communication (IPC)]]
