@@ -12,3 +12,37 @@ xinput set-prop NUMOFDEV "Device Enabled" 0
 #+end_src
 
 That should disable it.
+
+2. Makefile command substitution
+My Makefile
+#+begin_src makefile
+all: ... (other rules) clean
+
+clean:
+    rm $(find . -type f -executable)
+#+end_src
+When I delete =clean= rule from the above Makefile everything works as
+expected. After adding, =make= (also =make clean=) command results in:
+#+begin_src bash
+rm
+rm: missing operand
+Try 'rm --help' for more information
+make: *** [Makefile: 46: clean] Error 1
+#+end_src
+What causes problem here and how can I solve?
+
+*Answer*:
+There are several issues.
+
+*Passing a $ sign in a Makefile to the shell*
+You want to run the command
+#+begin_src bash
+rm $(find . -type f -executable)
+#+end_src
+to let the shell do the command substitution. To do this you need to write
+#+begin_src makefile
+clean:
+    rm $$(find . -type f -executable)
+#+end_src
+with the dollar doubled as Make itself us =$=.
+[[https://unix.stackexchange.com/questions/669679/makefile-command-substitution]]
