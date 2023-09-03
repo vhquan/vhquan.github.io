@@ -34,7 +34,6 @@
 	 :html-head-include-default-style nil
 	 :html-head-include-scripts nil
 	 :html-preamble blog-header
-	 :html-postamble "<hr><a href=\"/\">Home Page</a>"
 	 :html-link-home "/")
         ("static"
          :base-directory "posts/"

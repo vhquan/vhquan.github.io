@@ -1,0 +1,119 @@
+#+TITLE: Thread in Operating System
+#+AUTHOR: Quan Vu
+#+DATE: <2023-09-03 CN 09:23>
+
+Within a program, a *Thread* is a separate execution path. It is a lightweight
+process that the operating system can schedule and run concurrently with other
+threads. The operating system creates and manages threads, and they share the
+same memory and resources as the program that created them. This enables
+multiple threads to collaborate and work efficiently within a single program. 
+
+A thread is a single sequence stream within a process. Threads are also called
+lightweight processes as they posses some of the properties of processes. Each
+thread belongs to exactly one process. In an operating system that supports
+multithreading, the process can consist of many threads. But threads can be
+effective only if CPU is more than 1 otherwise two threads have to context
+switch for that single CPU. 
+
+* Why do we need thread?
+- Threads run in parallel improving the application performance. Each such
+  thread has its own CPU state and stack, but they share the address space of
+  the process and the environment.
+- Threads can share common data so they do not need to use interprocess
+  communication. Like the processes, threads also have states like ready,
+  executing, blocked, etc.
+- Priority can be assigned to the threads just like the process, and the
+  highest priority thread is scheduled first.
+- Each thread has its own *Thread Control Block (TCB)*. Like the process, a
+  context switch occurs for the thread, and register contents are saved in
+  (TCB). As threads share the same address space and resources,
+  synchronization is also required for the various activities of the thread.
+
+* Why multi-threading?
+  A thread is also known as a lightweight process. The idea is to achive
+  parallelism by dividing a process into multiple threads. For example, in a
+  browser, multiple tabs can be different threads. MS Word uses multiple
+  threads: one thread to format the text, another thread to process input,
+  etc. More advantages of multithreading are discussed below.
+
+Multithreading is a technique used in operating systems to improve the
+performance and responsiveness of computer systems. Multithreading allows
+multiple threads (i.e., lightweight processes) to share the same resources of
+a single process, such as the CPU, memory, and I/O devices.
+
+* Difference between Process and Thread
+The primary difference is that threads within the same process run in a shared
+memory space, while processes run in separate memory spaces. Threads are not
+independent of one another like processes are, and as a result, threads share
+with other threads their code section, data section, and OS resources (like
+open files and signal). But, like a process, a thread has its own program
+counter (PC), register set, and stack space.
+
+* Advantages of Thread
+- Responsiveness: If the process is divided into multiple threads, if one
+  thread completes its execution, then its output can be immediately returned.
+- Faster context switch: Context switch time between threads is lower compared
+  to the process context switch. Process context switching requires more
+  overhead from the CPU.
+- Effective utilization of multiprocessor system: If we have multiple threads
+  in a single process, then we can schedule multiple threads on multiple
+  processors. This will make process execution faster.
+- Resource sharing: Resources like code, data, and files can be shared among
+  all threads within a process. Note: stacks and registers can't be shared
+  among the threads. Each thread has its own stack and registerss.
+- Communication: Communication between multiple threads is easier, as the
+  threads share a common address space, while in the process we have to follow
+  some specific communication techniques for communication between the two
+  processes.
+- Enahcned throughput of the system: If a process is divided into multiple
+  threads, and each thread function is considered as one job, then the number
+  of jobs completed per unit of time is increased, thus increasing the
+  throughput of the system.
+
+* Types of Threads
+Threads are of two types. 
+- User level thread.
+- Kernel level thread.
+
+** User level threads
+User level thread is a type of thread that is not created using system
+calls. The kernel has no work in the management of user-level
+threads. User-level threads can be easily implemented by the user. In case
+when user-level threads are single-handed processes, kernel-level thread
+manages them. 
+
+*** Advantages of User-level threads
+- Implementation of the User-level thread is easier than kernel level thread.
+- Context switch time is less in user level thread.
+- User-level thread is more efficient than kernel-level thread.
+- Because of the prosence of only Program Counter, Register Set, and Stack
+  Space, it has a simple representation.
+
+*** Disadvantages of User-level threads
+- There is a lack of coordination between thread and kernel.
+- In case of a page fault, the whole process can be blocked.
+
+** Kernel level threads
+A kernel level thread is a type of thread that can recognize the Opearting
+System easily. Kernel level thread has its own thread table where it keeps
+track of the system. The operating system kernel helps in manging
+threads. Kernel threads somehow longer context switching time. Kernel helps in
+the management of threads.
+
+*** Advantages of kernel-level thread
+- It has up-to-date information on all threads.
+- Application that block frequency are to be handled by the kernel-level
+  threads.
+- Whenever any process requires more time to process, Kernel-level thread
+  provides more time to it. 
+
+*** Disadvantages of Kernel-level thread
+- Kernel-level thread is slower than User-level thread.
+- Implementation of this type of thread is a little more complex than a
+  user-level thread.
+
+** Components of Threads
+These are the basic components of the Operating System.
+- Stack space 
+- Register set 
+- Program counter
