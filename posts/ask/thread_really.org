@@ -1,0 +1,6 @@
+#+TITLE: What is a "thread" (really)?
+#+AUTHOR: Quan Vu
+#+DATE: <2023-09-03 CN 16:00>
+
+I have been trying to find a good definition, and get understanding, of what a
+/thread/ really is.

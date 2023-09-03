@@ -1,3 +1,5 @@
 #+TITLE: Secret notes
 
+- 2023-09-03 - [[file:ask/thread_really.org][What is a "thread" (really)?]]
 - 2023-09-03 - [[file:concepts/thread.org][Thread in Operating System]]
+- 2023-09-03 - [[file:linux_tool/linux_tips.org][Linux tools/tips]]
