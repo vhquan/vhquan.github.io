@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Acme&family=Fira+Code&family=Vollkorn:ital,wght@0,400;0,600;1,400;1,600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono&display=swap');
 
 * {
     font-family: 'Vollkorn', serif;
@@ -12,7 +12,7 @@ title, h1, h2, h3, h4, h5 {
 }
 
 pre, code {
-    font-family: 'Anonymous Pro', monospace;
+    font-family: 'DM Mono', monospace;
     font-size: 13px;
     background-color: #e8e8e8;
     border-radius: 3px;
