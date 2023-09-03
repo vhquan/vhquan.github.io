@@ -30,7 +30,7 @@
          :author "Quan Vu"
          :email "vuhongquanbk97@gmail.com"
          :with-creator nil
-	 :html-head "<link rel=\"stylesheet\" href=\"css/style.css\" type=\"text/css\"/>"
+	 :html-head "<link rel=\"stylesheet\" href=\"https://vhquan.github.io/css/style.css\" type=\"text/css\"/>"
 	 :html-head-include-default-style nil
 	 :html-head-include-scripts nil
 	 :html-preamble blog-header
