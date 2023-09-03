@@ -2,16 +2,17 @@
 
 * {
     font-family: 'Vollkorn', serif;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 title, h1, h2, h3, h4, h5 {
     font-family: 'Acme', sans-serif;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 pre, code {
     font-family: 'Fira Code', monospace;
-    font-size: 13px;
+    font-size: 14px;
     background-color: #dcdcdc;
+    border-radius: 30px;
 }
