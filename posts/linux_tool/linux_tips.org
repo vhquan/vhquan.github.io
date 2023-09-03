@@ -2,7 +2,7 @@
 #+AUTHOR: Quan Vu
 #+DATE: <2023-09-03 CN 15:55>
 
-1. Disable touchpad on linux using the command line
+* Disable touchpad on linux using the command line
 You could also use/install xinput.
 Run the command =xinput=, it will give you a list of input devices, find your
 touchpad in the list and it's number (id) = NUMOFDEV.
@@ -13,7 +13,7 @@ xinput set-prop NUMOFDEV "Device Enabled" 0
 
 That should disable it.
 
-2. Makefile command substitution
+* Makefile command substitution
 My Makefile
 #+begin_src makefile
 all: ... (other rules) clean

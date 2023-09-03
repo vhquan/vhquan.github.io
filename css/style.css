@@ -3,9 +3,10 @@
 
 * {
     font-family: 'Inter', sans-serif;
+    font-size: 12px;
 }
 
 .org-src-container, .code {
     font-family: 'Fira Code', monospace;
-    font-size: 10px;
+    font-size: 12px;
 }
