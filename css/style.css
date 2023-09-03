@@ -1,14 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono&family=DM+Sans:opsz@9..40&family=DM+Serif+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,300;0,500;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap');
 
 title, h1, h2, h3, h4, h5 {
     font-family: 'DM Serif Display', serif;
 
-body {
-    font-family: 'DM Sans', sans-serif;
+* {
+    font-family: 'Alegreya Sans', sans-serif;
     font-size: 12px;
 }
 
 .org-src-container, code {
-    font-family: 'DM Mono', monospace;
+    font-family: 'Fira Code', monospace;
     font-size: 12px;
 }
