@@ -23,7 +23,7 @@
          :publishing-function org-html-publish-to-html
          :auto-sitemap t
 	 :auto-preamble nil
-         :sitemap-title "Secret notes"
+         :sitemap-title "Aly's Quan mini notes"
          :sitemap-filename "index.org"
          :sitemap-format-entry org-sitemap-custom-entry-format
          :sitemap-style list
