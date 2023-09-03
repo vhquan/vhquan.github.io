@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-09-03 CN 16:01 -->
+<!-- 2023-09-03 CN 16:12 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Linux tools/tips</title>
@@ -27,10 +27,12 @@ Run the command <code>xinput</code>, it will give you a list of input devices, f
 touchpad in the list and it's number (id) = NUMOFDEV.
 </p>
 
+<div class="org-src-container">
+<pre class="src src-bash">xinput set-prop NUMOFDEV "Device Enabled" 0
+</pre>
+</div>
+
 <p>
-```
-xinput set-prop NUMOFDEV "Device Enabled" 0
-```
 That should disable it.
 </p>
 </div>

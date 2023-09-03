@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-09-03 CN 16:12 -->
+<!-- 2023-09-03 CN 16:10 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>What is a "thread" (really)?</title>
+<title>Secret notes</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="Quan Vu" />
 <link rel="stylesheet" href="https://vhquan.github.io/css/style.css" type="text/css"/>
@@ -17,11 +17,12 @@
  |
  <a accesskey="H" href="/"> HOME </a>
 </div><div id="content">
-<h1 class="title">What is a "thread" (really)?</h1>
-<p>
-I have been trying to find a good definition, and get understanding, of what a
-<i>thread</i> really is.
-</p>
+<h1 class="title">Secret notes</h1>
+<ul class="org-ul">
+<li>2023-09-03 - <a href="ask/thread_really.html">What is a "thread" (really)?</a></li>
+<li>2023-09-03 - <a href="concepts/thread.html">Thread in Operating System</a></li>
+<li>2023-09-03 - <a href="linux_tool/linux_tips.html">Linux tools/tips</a></li>
+</ul>
 </div>
 </body>
 </html>

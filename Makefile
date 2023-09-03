@@ -11,6 +11,11 @@ publish_no_init: publish.el
 	@echo "Publishing ... with --no-init."
 	emacs --batch --no-init --load publish.el --funcall org-publish-all
 
+.PHONY: clean debug clear
+
+clear:
+	@rm -rf $$(find . -name "*~")
+
 clean:
 	@echo "Cleaning up..."
 	@rm -rvf *.elc

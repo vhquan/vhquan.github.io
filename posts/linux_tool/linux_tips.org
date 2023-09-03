@@ -7,7 +7,8 @@ You could also use/install xinput.
 Run the command =xinput=, it will give you a list of input devices, find your
 touchpad in the list and it's number (id) = NUMOFDEV.
 
-```
+#+begin_src bash
 xinput set-prop NUMOFDEV "Device Enabled" 0
-```
+#+end_src
+
 That should disable it.

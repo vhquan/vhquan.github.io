@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-09-03 CN 16:12 -->
+<!-- 2023-09-03 CN 16:10 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>What is a "thread" (really)?</title>
+<title>Linux tools/tips</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="Quan Vu" />
 <link rel="stylesheet" href="https://vhquan.github.io/css/style.css" type="text/css"/>
@@ -17,10 +17,23 @@
  |
  <a accesskey="H" href="/"> HOME </a>
 </div><div id="content">
-<h1 class="title">What is a "thread" (really)?</h1>
+<h1 class="title">Linux tools/tips</h1>
+<ol class="org-ol">
+<li>Disable touchpad on linux using the command line</li>
+</ol>
 <p>
-I have been trying to find a good definition, and get understanding, of what a
-<i>thread</i> really is.
+You could also use/install xinput.
+Run the command <code>xinput</code>, it will give you a list of input devices, find your
+touchpad in the list and it's number (id) = NUMOFDEV.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">xinput set-prop NUMOFDEV "Device Enabled" 0
+</pre>
+</div>
+
+<p>
+That should disable it.
 </p>
 </div>
 </body>
