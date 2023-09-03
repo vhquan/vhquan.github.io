@@ -44,5 +44,6 @@ to let the shell do the command substitution. To do this you need to write
 clean:
     rm $$(find . -type f -executable)
 #+end_src
-with the dollar doubled as Make itself us =$=.
+with the dollar doubled as Make itself us =$=
+
 [[https://unix.stackexchange.com/questions/669679/makefile-command-substitution]]

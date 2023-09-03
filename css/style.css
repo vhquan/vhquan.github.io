@@ -1,12 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono&family=DM+Sans:opsz@9..40&family=DM+Serif+Display&display=swap');
 
-* {
-    font-family: 'Inter', sans-serif;
+title, h1, h2, h3, h4, h5 {
+    font-family: 'DM Serif Display', serif;
+
+body {
+    font-family: 'DM Sans', sans-serif;
     font-size: 12px;
 }
 
-.org-src-container, .code {
-    font-family: 'Fira Code', monospace;
+.org-src-container, code {
+    font-family: 'DM Mono', monospace;
     font-size: 12px;
 }
