@@ -1,18 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,300;0,500;1,300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap');
-
-title, h1, h2, h3, h4, h5 {
-    font-family: 'DM Serif Display', serif;
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Fira+Code&family=Vollkorn:ital,wght@0,400;0,600;1,400;1,600&display=swap');
 
 * {
-    font-family: 'Alegreya Sans', sans-serif;
-    font-weight: 300;
+    font-family: 'Vollkorn', serif;
     font-size: 12px;
+}
+
+title, h1, h2, h3, h4, h5 {
+    font-family: 'Acme', sans-serif;
 }
 
 .org-src-container, code {
     font-family: 'Fira Code', monospace;
-    font-weight: 400;
     font-size: 12px;
 }
