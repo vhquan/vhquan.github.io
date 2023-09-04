@@ -1,0 +1,64 @@
+#+TITLE: 10 million question about OOP
+#+AUTHOR: Quan Vu
+#+DATE: <2023-09-03 CN 23:38>
+
+the OO revolution (the object-oriented revolution)
+
+* Was object oriented programming revolutionary?
+> It was certainly hyped that way back in the 1980s and 1990s. Thus, OOP became
+the most widely used paradigm in the IT industry.
+
+> But I don't think it was revolutionary. It offered a better way to manage
+program size and complexity than procedural programming. If offered a better
+way to scale an application. That was enough. 
+
+> It was for some applications a great improvement. This is the reason it was
+  invented (Simula 67). It was totally overhyped. Even in an OOP program, the
+  real work is done by procedural code. OOP basically is packaging and
+  glue. Useful, but not revolutionary.
+
+> Not really. With structured programming people had been collecting all the
+  data associated with something (a file, a model or whatever) in things like
+  C structs and passing pointers to the structs as arguments to functions
+  associated with the data.
+
+Things like Unix FILE handles were pointers to structs with buffers and
+pointers to functions used for reading and writing those buffers to/from
+disk. You had different functions for different types of devices.
+
+So the translation of that into the idea of classes of objects responding
+differently to messages wasn't really as much of a leap, in terms of
+implementation, as was the paradigm shift in programmers heads that they were
+now sending messages rather than calling functions. That paradigm and the idea
+of inheritance became a fad that many languages adopted, with various degrees
+of purity. I think it began with Simula, but I first saw a class browser in
+Smalltalk. I was using a C library at the time and discovered that if I did a
+global replacement of the word struct to class (and #defined it back to struct
+for the C compiler), I could use a class browser designed for C++ on my C
+library and see something very similar to inheritance within the library.
+
+* What exactly is Object-oriented programming?
+4 building blocks and 4 principles you need to know about OOP.
+** 4 building blocks
+1. Class - these are user-defined data types that act as the blueprint for
+   objects, attributes, and methods.
+2. Objects - These are instances of a class with specifically defined
+   data. When a class is defined initially, the description is the only object
+   that is defined.
+3. Attributes - These are defined in the class template and represent the state
+   of an object. Objects contain data stored in the attribute field.
+4. Methods - These are functions that are defined inside a class that describe
+   the behavior of an object. They are useful for reusability or keeping
+   functionality encapsulated inside one object at a time. Code re-usability is
+   a great benefit when debugging.
+** 4 principles
+1) Inheritance
+2) Encapsulation
+3) Abstraction
+4) Polymorphism
+
+[[https://betterprogramming.pub/what-exactly-is-object-oriented-programming-b5758d7e8ff5]]
+[[https://www.freecodecamp.org/news/what-is-object-oriented-programming/]]
+* What's the point of OOP?
+[[https://stackoverflow.com/questions/24270/whats-the-point-of-oop]]
+[[https://stackoverflow.blog/2020/09/02/if-everyone-hates-it-why-is-oop-still-so-widely-spread/]]

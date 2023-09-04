@@ -10,7 +10,7 @@
     (if (= (length filename) 0)
 	(format "*%s*" entry)
       (format "%s - [[file:%s][%s]]"
-	      (format-time-string "%Y-%m-%d" (org-publish-find-date entry project))
+	      (format-time-string "%Y.%m.%d" (org-publish-find-date entry project))
 	      entry
 	      filename))))
 
@@ -23,7 +23,7 @@
          :publishing-function org-html-publish-to-html
          :auto-sitemap t
 	 :auto-preamble nil
-         :sitemap-title "Aly's Quan mini notes"
+         :sitemap-title "Aly's Quan mini notes 04.09.2023"
          :sitemap-filename "index.org"
          :sitemap-format-entry org-sitemap-custom-entry-format
          :sitemap-style list
