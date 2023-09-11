@@ -23,7 +23,7 @@
          :publishing-function org-html-publish-to-html
          :auto-sitemap t
 	 :auto-preamble nil
-         :sitemap-title "Aly's Quan mini notes 04.09.2023"
+         :sitemap-title "Aly's Quan Notes"
          :sitemap-filename "index.org"
          :sitemap-format-entry org-sitemap-custom-entry-format
          :sitemap-style list

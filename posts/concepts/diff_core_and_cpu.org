@@ -27,6 +27,47 @@ between them. Initially, we'll have a brief historical context of processing
 units. So, we'll investigate the concepts of cores and CPU. Finally, we'll
 compare them in a systematic summary.
 
+[[../images/comp_arch.png]]
+
+The high-level definitions of these parts are as follows:
+- The central processing unit (CPU) is the part of the computer that is built
+  to be obsessed with "what is next?" If you computer is rated at 3.0
+  Gigahertz, it means that the CPU will ask "What next?" three billion times
+  per second. You are going to have to learn how to talk fast to keep up with
+  the CPU.
+- The main memory is used to store information that the CPU needs in a
+  hurry. The main memory is nearly as fast as the CPU. But the information
+  stored in the main memory vanishes when the computer is turned off.
+- The secondary memory is also used to store information, but it is much
+  slower than the main memory. The advantage of the secondary memory is that
+  it can store information even when there is no power to the
+  computer. Examples of secondary memory are disk drives of flash memory
+  (typically found in USB sticks and portable music players).
+- The Input and Output devices are simply our screen, keyboard, mouse and
+  microphone, speaker, touchpad, etc. They are all of the ways we interact
+  with the computer.
+- These days, most computers also have a Network Connection to retrieve
+  information over a network. We can think of the network as a very slow place
+  to store and retrieve data that might not always be "up". So in a sense, the
+  network is a slower and at times unreliable form of Secondary Memory.
+
+While most of the detail of how these components work is best left to computer
+builders, it helps to have some terminology so we can talk about these
+different paths as we write our programs.
+
+As a programmer, your job is to use and orchestrate each of these resources to
+solve the problem that you need to solve and analyze the data you get from the
+solution. As a programmer you will mostly be "talking" to the CPU and telling
+it what to do next. Sometimes you will tell the CPU to use the main memory,
+secondary memory, network, or the input/output devices.
+
+You need to be the person who answers the CPU's "What next?" question. But it
+would be very uncomfortable to shrink you down to 5mm tall and insert you into
+the computer just so you could issue a command three billion times per
+second. So instead, you must write down your instructions in advance. We call
+these stored instructions a program and the act of writing these instructions
+down and getting the instructions to be correct programming.
+
 * The context of Processing Units
 Early computer systems, before the 70s, used limited processing units due to
 the complex integration of transistors and logical gates on a large scale in a

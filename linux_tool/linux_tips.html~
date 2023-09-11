@@ -22,14 +22,14 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org48f34e4">1. Disable touchpad on linux using the command line</a></li>
-<li><a href="#org19d3b07">2. Makefile command substitution</a></li>
+<li><a href="#org61b467d">1. Disable touchpad on linux using the command line</a></li>
+<li><a href="#orgc2292ec">2. Makefile command substitution</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org48f34e4" class="outline-2">
-<h2 id="org48f34e4"><span class="section-number-2">1</span> Disable touchpad on linux using the command line</h2>
+<div id="outline-container-org61b467d" class="outline-2">
+<h2 id="org61b467d"><span class="section-number-2">1</span> Disable touchpad on linux using the command line</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 You could also use/install xinput.
@@ -48,8 +48,8 @@ That should disable it.
 </div>
 </div>
 
-<div id="outline-container-org19d3b07" class="outline-2">
-<h2 id="org19d3b07"><span class="section-number-2">2</span> Makefile command substitution</h2>
+<div id="outline-container-orgc2292ec" class="outline-2">
+<h2 id="orgc2292ec"><span class="section-number-2">2</span> Makefile command substitution</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 My Makefile

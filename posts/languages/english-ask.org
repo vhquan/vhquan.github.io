@@ -1,0 +1,27 @@
+#+TITLE: Dumb questions in English
+#+DATE: <2023-09-11 Mon 21:55>
+#+AUTHOR: Quan Vu
+
+* What is the difference between the phrase "as fas as I know" and "for all I know"?
+*"For all I know"* is often used in situations where the statement that you are
+ qualifying with this phrase runs completely contrary to what was said right
+ before that, or is a wild guess that would change everything compared to what
+ was said before.
+
+#+begin_quote
+I don't know why his opinion of these products is so favorable. He could be an
+investor in the company that produces them, *for all I know*.
+#+end_quote
+
+*"As far as I know"* is not used alongside guesses. It means that you are
+ offering information that is based on what you actually know, but you don't
+ know a lot, or you could be mistaken.
+-----
+*For all I know.* Peopel typically say this when they think they know very
+little or nothing about a subject. (They have no expertise at all). (Theo như
+tao biết...)
+*As far as I know*. People typically say this when they know at least a little
+bit about something and may even be true experts in the field, but are
+granting that no one ever knows everything. (Theo như những gì tao học
+thì/theo kiến thức của tao thì ...)
+
