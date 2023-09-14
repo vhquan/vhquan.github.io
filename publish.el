@@ -23,11 +23,11 @@
          :publishing-function org-html-publish-to-html
          :auto-sitemap t
 	 :auto-preamble nil
-         :sitemap-title "Aly's Quan Notes"
+         :sitemap-title "Snacker Turtle"
          :sitemap-filename "index.org"
          :sitemap-format-entry org-sitemap-custom-entry-format
          :sitemap-style list
-         :author "Quan Vu"
+         :author "Rùa"
          :email "vuhongquanbk97@gmail.com"
          :with-creator nil
 	 :html-head "<link rel=\"stylesheet\" href=\"https://vhquan.github.io/css/style.css\" type=\"text/css\"/>"
