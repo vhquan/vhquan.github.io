@@ -1,7 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Karla:ital,wght@0,300;0,600;1,300;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Lemon&display=swap');
 
-* {
-    font-family: 'Karla', sans-serif;
+title, h1, h2, h3, h4 {
+    font-family: 'Lemon', cursive;
+}
+
+body {
+    font-family: 'Cormorant Garamond', serif;
 }
 
 pre,
