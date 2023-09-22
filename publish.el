@@ -23,11 +23,11 @@
          :publishing-function org-html-publish-to-html
          :auto-sitemap t
 	 :auto-preamble nil
-         :sitemap-title "Adu Overflow"
+         :sitemap-title "quanvh9"
          :sitemap-filename "index.org"
          :sitemap-format-entry org-sitemap-custom-entry-format
          :sitemap-style list
-         :author "adu"
+         :author "quanvh9"
          :email "vuhongquanbk97@gmail.com"
          :with-creator nil
 	 :html-head "<link rel=\"stylesheet\" href=\"https://vhquan.github.io/css/style.css\" type=\"text/css\"/>"
