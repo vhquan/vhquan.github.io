@@ -11,6 +11,8 @@ h4 {
 
 body {
     font-family: 'Lato', sans-serif;
+    margin: auto;
+    max-width: 78ch;
 }
 
 pre,
