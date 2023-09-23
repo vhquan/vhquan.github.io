@@ -1,16 +1,22 @@
 @font-face {
-    font-family: "Georgia";
-    src: url("fonts/georgia.ttf") format("truetype")
+    font-family: "DejaVu Sans Mono";
+    src: url("fonts/dejavu/DejaVuSansMono") format("truetype")
+}
+
+@font-face {
+    font-family: "Fisa Code";
+    src: url("fonts/fisacode/Fisa Code Book Regular.ttf") format("truetype")
 }
 
 * {
-    font-family: "Georgia";
-    margin: auto;
+    font-family: "DejaVu Sans Mono";
+    margin: 6 auto;
     max-width: 78ch;
 }
 
 pre,
 code {
+    font-family: "Fisa Code";
     background-color: #e8e8e8;
     border-radius: 3px;
     padding: 3px;
