@@ -1,24 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
-title,
-h1,
-h2,
-h3,
-h4 {
-    font-family: 'Alegreya Sans', sans-serif;
+@font-face {
+    font-family: "Georgia";
+    src: url("fonts/georgia.ttf") format("truetype")
 }
 
-body {
-    font-family: 'Lato', sans-serif;
+* {
+    font-family: "Georgia";
     margin: auto;
     max-width: 78ch;
 }
 
 pre,
 code {
-    font-family: 'Fira Code', monospace;
-    font-size: 13px;
     background-color: #e8e8e8;
     border-radius: 3px;
     padding: 3px;
