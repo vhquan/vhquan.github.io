@@ -9,7 +9,7 @@
   (let ((filename (org-publish-find-title entry project)))
     (if (= (length filename) 0)
 	(format "*%s*" entry)
-      (format "%s - [[file:%s][%s]]"
+      (format "%s   [[file:%s][%s]]"
 	      (format-time-string "%Y.%m.%d" (org-publish-find-date entry project))
 	      entry
 	      filename))))
