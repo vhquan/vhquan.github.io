@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-09-22 Fri 21:33 -->
+<!-- 2023-09-23 Sat 11:24 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Thread in Operating System</title>
@@ -22,30 +22,30 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org76f55d4">1. Why do we need thread?</a></li>
-<li><a href="#orgc5121ea">2. Why multi-threading?</a></li>
-<li><a href="#orgff6bba1">3. Difference between Process and Thread</a></li>
-<li><a href="#orgeb5f2ab">4. Advantages of Thread</a></li>
-<li><a href="#org764be5b">5. Types of Threads</a>
+<li><a href="#orgf1d0b4f">1. Why do we need thread?</a></li>
+<li><a href="#org1563e85">2. Why multi-threading?</a></li>
+<li><a href="#orgbaf07fb">3. Difference between Process and Thread</a></li>
+<li><a href="#org7a2f25b">4. Advantages of Thread</a></li>
+<li><a href="#org041b723">5. Types of Threads</a>
 <ul>
-<li><a href="#org87b076d">5.1. User level threads</a>
+<li><a href="#orgc631788">5.1. User level threads</a>
 <ul>
-<li><a href="#org5fc0c17">5.1.1. Advantages of User-level threads</a></li>
-<li><a href="#orga82f004">5.1.2. Disadvantages of User-level threads</a></li>
+<li><a href="#org73baae2">5.1.1. Advantages of User-level threads</a></li>
+<li><a href="#org3b0080d">5.1.2. Disadvantages of User-level threads</a></li>
 </ul>
 </li>
-<li><a href="#org465629f">5.2. Kernel level threads</a>
+<li><a href="#orga1ee3aa">5.2. Kernel level threads</a>
 <ul>
-<li><a href="#org129c404">5.2.1. Advantages of kernel-level thread</a></li>
-<li><a href="#org7082970">5.2.2. Disadvantages of Kernel-level thread</a></li>
+<li><a href="#org55de4ce">5.2.1. Advantages of kernel-level thread</a></li>
+<li><a href="#orga666848">5.2.2. Disadvantages of Kernel-level thread</a></li>
 </ul>
 </li>
-<li><a href="#org8e82c7a">5.3. Components of Threads</a></li>
+<li><a href="#orgcf484c5">5.3. Components of Threads</a></li>
 </ul>
 </li>
-<li><a href="#orga2d248e">6. Wikipedia</a>
+<li><a href="#org99ab27d">6. Wikipedia</a>
 <ul>
-<li><a href="#orge911ef8">6.1. Sources:</a></li>
+<li><a href="#org325da82">6.1. Sources:</a></li>
 </ul>
 </li>
 </ul>
@@ -68,8 +68,8 @@ effective only if CPU is more than 1 otherwise two threads have to context
 switch for that single CPU. 
 </p>
 
-<div id="outline-container-org76f55d4" class="outline-2">
-<h2 id="org76f55d4"><span class="section-number-2">1</span> Why do we need thread?</h2>
+<div id="outline-container-orgf1d0b4f" class="outline-2">
+<h2 id="orgf1d0b4f"><span class="section-number-2">1</span> Why do we need thread?</h2>
 <div class="outline-text-2" id="text-1">
 <ul class="org-ul">
 <li>Threads run in parallel improving the application performance. Each such
@@ -88,8 +88,8 @@ synchronization is also required for the various activities of the thread.</li>
 </div>
 </div>
 
-<div id="outline-container-orgc5121ea" class="outline-2">
-<h2 id="orgc5121ea"><span class="section-number-2">2</span> Why multi-threading?</h2>
+<div id="outline-container-org1563e85" class="outline-2">
+<h2 id="org1563e85"><span class="section-number-2">2</span> Why multi-threading?</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 A thread is also known as a lightweight process. The idea is to achive
@@ -108,8 +108,8 @@ a single process, such as the CPU, memory, and I/O devices.
 </div>
 </div>
 
-<div id="outline-container-orgff6bba1" class="outline-2">
-<h2 id="orgff6bba1"><span class="section-number-2">3</span> Difference between Process and Thread</h2>
+<div id="outline-container-orgbaf07fb" class="outline-2">
+<h2 id="orgbaf07fb"><span class="section-number-2">3</span> Difference between Process and Thread</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 The primary difference is that threads within the same process run in a shared
@@ -122,8 +122,8 @@ counter (PC), register set, and stack space.
 </div>
 </div>
 
-<div id="outline-container-orgeb5f2ab" class="outline-2">
-<h2 id="orgeb5f2ab"><span class="section-number-2">4</span> Advantages of Thread</h2>
+<div id="outline-container-org7a2f25b" class="outline-2">
+<h2 id="org7a2f25b"><span class="section-number-2">4</span> Advantages of Thread</h2>
 <div class="outline-text-2" id="text-4">
 <ul class="org-ul">
 <li>Responsiveness: If the process is divided into multiple threads, if one
@@ -149,8 +149,8 @@ throughput of the system.</li>
 </div>
 </div>
 
-<div id="outline-container-org764be5b" class="outline-2">
-<h2 id="org764be5b"><span class="section-number-2">5</span> Types of Threads</h2>
+<div id="outline-container-org041b723" class="outline-2">
+<h2 id="org041b723"><span class="section-number-2">5</span> Types of Threads</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 Threads are of two types. 
@@ -161,8 +161,8 @@ Threads are of two types.
 </ul>
 </div>
 
-<div id="outline-container-org87b076d" class="outline-3">
-<h3 id="org87b076d"><span class="section-number-3">5.1</span> User level threads</h3>
+<div id="outline-container-orgc631788" class="outline-3">
+<h3 id="orgc631788"><span class="section-number-3">5.1</span> User level threads</h3>
 <div class="outline-text-3" id="text-5-1">
 <p>
 User level thread is a type of thread that is not created using system
@@ -173,8 +173,8 @@ manages them.
 </p>
 </div>
 
-<div id="outline-container-org5fc0c17" class="outline-4">
-<h4 id="org5fc0c17"><span class="section-number-4">5.1.1</span> Advantages of User-level threads</h4>
+<div id="outline-container-org73baae2" class="outline-4">
+<h4 id="org73baae2"><span class="section-number-4">5.1.1</span> Advantages of User-level threads</h4>
 <div class="outline-text-4" id="text-5-1-1">
 <ul class="org-ul">
 <li>Implementation of the User-level thread is easier than kernel level thread.</li>
@@ -186,8 +186,8 @@ Space, it has a simple representation.</li>
 </div>
 </div>
 
-<div id="outline-container-orga82f004" class="outline-4">
-<h4 id="orga82f004"><span class="section-number-4">5.1.2</span> Disadvantages of User-level threads</h4>
+<div id="outline-container-org3b0080d" class="outline-4">
+<h4 id="org3b0080d"><span class="section-number-4">5.1.2</span> Disadvantages of User-level threads</h4>
 <div class="outline-text-4" id="text-5-1-2">
 <ul class="org-ul">
 <li>There is a lack of coordination between thread and kernel.</li>
@@ -197,8 +197,8 @@ Space, it has a simple representation.</li>
 </div>
 </div>
 
-<div id="outline-container-org465629f" class="outline-3">
-<h3 id="org465629f"><span class="section-number-3">5.2</span> Kernel level threads</h3>
+<div id="outline-container-orga1ee3aa" class="outline-3">
+<h3 id="orga1ee3aa"><span class="section-number-3">5.2</span> Kernel level threads</h3>
 <div class="outline-text-3" id="text-5-2">
 <p>
 A kernel level thread is a type of thread that can recognize the Opearting
@@ -209,8 +209,8 @@ the management of threads.
 </p>
 </div>
 
-<div id="outline-container-org129c404" class="outline-4">
-<h4 id="org129c404"><span class="section-number-4">5.2.1</span> Advantages of kernel-level thread</h4>
+<div id="outline-container-org55de4ce" class="outline-4">
+<h4 id="org55de4ce"><span class="section-number-4">5.2.1</span> Advantages of kernel-level thread</h4>
 <div class="outline-text-4" id="text-5-2-1">
 <ul class="org-ul">
 <li>It has up-to-date information on all threads.</li>
@@ -222,8 +222,8 @@ provides more time to it.</li>
 </div>
 </div>
 
-<div id="outline-container-org7082970" class="outline-4">
-<h4 id="org7082970"><span class="section-number-4">5.2.2</span> Disadvantages of Kernel-level thread</h4>
+<div id="outline-container-orga666848" class="outline-4">
+<h4 id="orga666848"><span class="section-number-4">5.2.2</span> Disadvantages of Kernel-level thread</h4>
 <div class="outline-text-4" id="text-5-2-2">
 <ul class="org-ul">
 <li>Kernel-level thread is slower than User-level thread.</li>
@@ -234,8 +234,8 @@ user-level thread.</li>
 </div>
 </div>
 
-<div id="outline-container-org8e82c7a" class="outline-3">
-<h3 id="org8e82c7a"><span class="section-number-3">5.3</span> Components of Threads</h3>
+<div id="outline-container-orgcf484c5" class="outline-3">
+<h3 id="orgcf484c5"><span class="section-number-3">5.3</span> Components of Threads</h3>
 <div class="outline-text-3" id="text-5-3">
 <p>
 These are the basic components of the Operating System.
@@ -248,8 +248,8 @@ These are the basic components of the Operating System.
 </div>
 </div>
 </div>
-<div id="outline-container-orga2d248e" class="outline-2">
-<h2 id="orga2d248e"><span class="section-number-2">6</span> Wikipedia</h2>
+<div id="outline-container-org99ab27d" class="outline-2">
+<h2 id="org99ab27d"><span class="section-number-2">6</span> Wikipedia</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 A <b>thread</b> in computer science is short for a thread of execution. Threads are a
@@ -263,8 +263,8 @@ as compared with processes.
 </p>
 </div>
 
-<div id="outline-container-orge911ef8" class="outline-3">
-<h3 id="orge911ef8"><span class="section-number-3">6.1</span> Sources:</h3>
+<div id="outline-container-org325da82" class="outline-3">
+<h3 id="org325da82"><span class="section-number-3">6.1</span> Sources:</h3>
 <div class="outline-text-3" id="text-6-1">
 <ul class="org-ul">
 <li>David R. Butenhof: <i>Programming with POSIX Threads</i></li>

@@ -22,12 +22,13 @@
          :recursive t
          :publishing-function org-html-publish-to-html
          :auto-sitemap t
+         :sitemap-sort-files anti-chronologically
 	 :auto-preamble nil
-         :sitemap-title "quanvh9"
+         :sitemap-title "devlift"
          :sitemap-filename "index.org"
          :sitemap-format-entry org-sitemap-custom-entry-format
          :sitemap-style list
-         :author "quanvh9"
+         :author "devlift"
          :email "vuhongquanbk97@gmail.com"
          :with-creator nil
 	 :html-head "<link rel=\"stylesheet\" href=\"https://vhquan.github.io/css/style.css\" type=\"text/css\"/>"

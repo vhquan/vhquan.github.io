@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-09-22 Fri 21:33 -->
+<!-- 2023-09-23 Sat 11:24 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Cache</title>
@@ -22,10 +22,10 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org61be9a9">1. Motivation</a></li>
-<li><a href="#orgdb20cf8">2. Latency</a></li>
-<li><a href="#org97e5fdd">3. Throughput</a></li>
-<li><a href="#org5f9fafb">4. Operation</a></li>
+<li><a href="#org9528e3c">1. Motivation</a></li>
+<li><a href="#org8b544fb">2. Latency</a></li>
+<li><a href="#org8f85094">3. Throughput</a></li>
+<li><a href="#org3d1c43a">4. Operation</a></li>
 </ul>
 </div>
 </div>
@@ -53,8 +53,8 @@ and spatial locality, where data is requested that is stored physically close
 to data that has already been requested.
 </p>
 
-<div id="outline-container-org61be9a9" class="outline-2">
-<h2 id="org61be9a9"><span class="section-number-2">1</span> Motivation</h2>
+<div id="outline-container-org9528e3c" class="outline-2">
+<h2 id="org9528e3c"><span class="section-number-2">1</span> Motivation</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 There is an inherent trade-off between size and speed (given that a larger
@@ -70,8 +70,8 @@ throughput (bandwidth):
 </div>
 </div>
 
-<div id="outline-container-orgdb20cf8" class="outline-2">
-<h2 id="orgdb20cf8"><span class="section-number-2">2</span> Latency</h2>
+<div id="outline-container-org8b544fb" class="outline-2">
+<h2 id="org8b544fb"><span class="section-number-2">2</span> Latency</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 A larger resource incurs a significant latency for access - e.g. it can take
@@ -84,8 +84,8 @@ correctly the latency is bypassed altogether.
 </div>
 </div>
 
-<div id="outline-container-org97e5fdd" class="outline-2">
-<h2 id="org97e5fdd"><span class="section-number-2">3</span> Throughput</h2>
+<div id="outline-container-org8f85094" class="outline-2">
+<h2 id="org8f85094"><span class="section-number-2">3</span> Throughput</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 The use a cache also allows for higher throughput from the underlying
@@ -101,8 +101,8 @@ bandwidth required for transmitting address information.
 </div>
 </div>
 
-<div id="outline-container-org5f9fafb" class="outline-2">
-<h2 id="org5f9fafb"><span class="section-number-2">4</span> Operation</h2>
+<div id="outline-container-org3d1c43a" class="outline-2">
+<h2 id="org3d1c43a"><span class="section-number-2">4</span> Operation</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Hardware implementations cache as a block of memory for temporary storage of
