@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
-@font-face {
-    font-family: "Fisa Code";
-    src: url("fonts/fisacode/Fisa Code Book Regular.ttf") format("truetype")
-}
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 * {
     font-family: 'Gentium Book Plus', serif;
@@ -13,7 +9,7 @@
 
 pre,
 code {
-    font-family: "Fisa Code";
+    font-family: "JetBrains Mono", monospace;
     font-size: 12px;
     background-color: #e8e8e8;
     border-radius: 3px;
