@@ -1,0 +1,677 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Pre-Cana Test 1</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="7e361b06-d6e1-4f89-8e67-90c4442a7e44" class="page serif"><header><div class="page-header-icon undefined"><span class="icon">📝</span></div><h1 class="page-title">Pre-Cana Test 1</h1><p class="page-description"></p></header><div class="page-body"><h3 id="7a29304d-53b9-48fa-adb4-2da7ac3b7f9e" class="">1. Hôn nhân là gì?</h3><p id="7818788c-a7cd-48b1-a311-a195931c90ea" class=""><strong>Trả lời</strong>: </p><blockquote id="bd18155c-d62d-41b2-a4a6-72453bd032de" class="">Hôn nhân là giao ước ký kết giữa một người nam và một người nữ, với đầy đủ tự do ưng thuận và ý thức trách nhiệm, để trở thành vợ chồng.</blockquote><p id="afdf1f89-0704-4f64-80bf-c0aa969466f5" class=""><strong>Diễn giải thêm: </strong></p><ul id="3ae04545-0b08-43d1-a606-f70e0c28c878" class="bulleted-list"><li style="list-style-type:disc">để sống yêu thương và giúp đỡ nhau trong tình nghĩa vợ chồng</li></ul><ul id="6d29e084-a7c1-4f95-a7d0-dcbf68684aec" class="bulleted-list"><li style="list-style-type:disc">để sinh sản và giáo dục con cái trong nhiệm vụ làm cha làm mẹ.</li></ul><h3 id="616faa4c-6a46-4441-b22c-0d9830543272" class="">2. Hôn nhân có những mục đích nào?</h3><p id="6839dd0b-737f-4d24-b9c0-679ee387dd56" class=""><strong>Trả lời:</strong></p><blockquote id="c9e8c341-e8b6-49da-95ec-f2fc7d87d179" class="">Hôn nhân có 2 mục đích này:<br/>- Một là để yêu thương và giúp đỡ lẫn nhau.<br/>- Hai là cộng tác với Thiên Chúa trong việc sinh sản và giáo dục con cái.<br/></blockquote><p id="50b73dac-39a1-4147-b6e3-54fe559969b3" class=""><strong>Diễn giải thêm:</strong></p><ul id="49bb6e60-1d77-4145-b136-2773ae8077ad" class="bulleted-list"><li style="list-style-type:disc">Nhờ khế ước hôn nhân, người nam và người nữ ngày một trở nên gắn bó với nhau hơn qua việc nỗ lực sống cam kết trao hiến trọn vẹn cho nhau.</li></ul><ul id="46ecc2bc-94b1-42f9-b1cf-d0433435f041" class="bulleted-list"><li style="list-style-type:disc">Con cái là ân huệ cao quý nhất của hôn nhân và là sự đóng góp lớn lao kiến tạo hạnh phúc của cha mẹ.</li></ul><ul id="a3ce1afb-922a-4f6a-b300-d482a2a6e25d" class="bulleted-list"><li style="list-style-type:disc">Tình yêu vợ chồng còn trở nên phong phú nhờ hoa quả của đời sống luân lý, tinh thần và siêu nhiên được cha mẹ truyền lại cho con cái qua việc giáo dục.</li></ul><p id="a0f49024-deb2-41be-97d7-076e16fd22d1" class="">⇒ Mục tiêu nền tảng của hôn nhân và gia đình là phục vụ cho sự sống và hạnh phúc.</p><h3 id="262a6c5c-92b2-470f-a685-fdf665721cb8" class="">3. Hôn nhân công giáo là gì?</h3><p id="f9d1a818-cf29-4963-bacc-d0850e285f09" class=""><strong>Trả lời:</strong></p><blockquote id="6584d348-2dd5-4c1b-9d56-708ef146e25c" class="">Hôn nhân công giáo <strong>là bí tích</strong> chúa Giesu đã lập, để kết hợp hai người tín hữu, một nam một nữ, thành vợ chồng trước mặt Thiên Chúa và Hội Thánh, cùng ban ơn giúp họ sống xứng đáng ơn gọi của mình.</blockquote><p id="e351bdd3-8b57-4614-9c34-beeda54d49cc" class=""><strong>Diễn giải thêm:</strong></p><p id="7bc12961-6a30-4fc7-b632-e0a46ab51f57" class="">Qua bí tích hôn phối, tình yêu của hai vợ chồng được Thiên Chúa đóng ấn; họ nhận được những ơn siêu nhiên giúp họ sống ơn gọi hôn nhân và gia đình.</p><h3 id="79bd7b79-5436-4e35-8a91-cb38213efb42" class="">4. Hôn nhân công giáo có những đặc tính gì?</h3><p id="9d9db3af-4d7e-40d9-953f-6a9dc693260b" class=""><strong>Trả lời:</strong></p><blockquote id="b6099580-13a9-4f30-b696-1cc046223558" class="">Hôn nhân công giáo có hai đặc tính này:<br/>- Một là đơn nhất, nghĩa là một vợ một chồng.<br/>- Hai là bất khả phân ly, nghĩa là trung thành yêu thương nhau trọn đời.<br/></blockquote><p id="71e2bf7e-55db-4643-bb59-4edc04a259d2" class=""><strong>Diễn giải thêm:</strong></p><ul id="fbfabc03-3bcf-4a36-9197-243cad4f7b3a" class="bulleted-list"><li style="list-style-type:disc">“Tự bản chất, tình yêu vợ chồng đòi hỏi sự đơn nhất và bất khả phân ly. Họ không còn phải là hai, nhưng là một xương một thịt”. Lớn lên trong tình hiệp thông với nhau qua việc mỗi ngày trung thành sống lời cam kết hôn nhân, là trao hiến trọn vẹn cho nhau. → Sự hiệp thông này được củng cố, thanh luyện và hoàn thiện nhờ bí tích hôn phối.</li></ul><ul id="5b7c1cac-0201-42dc-8bb3-de1a0aaab29a" class="bulleted-list"><li style="list-style-type:disc">Đa thê là đi ngược với tình yêu vợ chồng, cũng như sự bình đẳng giữa hai vợ chồng.</li></ul><ul id="a5e35f71-497b-47ff-8337-93d02b069207" class="bulleted-list"><li style="list-style-type:disc">Bất khả phân ly là không thể li dị → đòi hỏi hai vợ chồng phải chung thủy, phải trung tín với nhau.</li></ul><ul id="1c2b6204-56dd-498a-b18d-90e81cdeee8e" class="bulleted-list"><li style="list-style-type:disc">Chung thủy suốt đời với người phối ngẫu là một trong những đặc điểm nổi bật của hôn nhân Công Giáo.</li></ul><ul id="02f63610-f5f2-4c7b-b189-6e24d459a123" class="bulleted-list"><li style="list-style-type:disc">“Điều gì Thiên Chúa đã kết hợp, thì loài người không được phân ly” (Mt 19,6)</li></ul><h3 id="ca3afbae-3ec1-4e12-a681-6f2fb995e0b9" class="">5. Để bí tích hôn phối thành sự phải có những điều kiện nào?</h3><p id="2999155d-a580-4099-b65b-9ef741f97f69" class=""><strong>Trả lời:</strong></p><blockquote id="b6422e4b-b94c-4a2c-9191-a9737a9966e5" class="">Phải có 4 điều kiện này:<br/>- Một là một nam một nữ đã rửa tội.<br/>- Hai là có tự do kết hôn, không bị ép buộc cũng không bị ngăn trở bởi luật tự nhiên hoặc luật Hội Thánh<br/>- Ba là phải bày tỏ sự ưng thuận Kết hôn<br/>- Bốn là cư hành theo thể thức của Hội Thánh<br/></blockquote><p id="a15a0db2-22fc-4946-82e4-9be9316fc2ac" class=""><strong>Diễn giải thêm:</strong></p><p id="541ddb64-0063-4589-b784-3a80ef3b22bd" class="">None</p><h3 id="99c79256-e229-42f9-bfda-900a73cbdb12" class="">6. Vì sao sự ưng thuận kết hôn là yếu tố cần thiết làm nên hôn nhân?</h3><p id="abdaabda-6d8c-43c2-9034-474f32856a6d" class=""><strong>Trả lời:</strong></p><blockquote id="c2f06697-f07d-452c-ba2a-ab1febf4fbff" class="">Vị sự ưng thuận này nối kết hai vợ chồng lại với nhau và được thể hiện trọn vẹn khi hai người “trở nên một xương một thịt.” Không một quyền hành nào của loài người có thể thay thế sự ưng thuận này. Thiếu sự tự do này, cuộc hôn nhân sẽ không thành.</blockquote><p id="46bf1b96-03d8-41f3-a142-795afb96115e" class=""><strong>Diễn giải thêm:</strong></p><p id="2f520d16-4418-4676-873f-fd46a4198959" class="">Sự ưng thuận kết hôn là hành vi nhân linh - nghĩa là hành vi của con người có ý thức và tự do - trong đó hai vợ chồng tự hiến cho nhau và đón nhận nhau. “Anh nhận em làm vợ”; “Em nhận anh làm chồng”. </p><p id="87d2adbf-cc83-40ed-84fb-9e9638721d1c" class="">⇒ Sự ưng thuận này phải là một hành vi ý chí của mỗi bên kết hôn, không bị cương bức vì bạo lực hay quá sợ hãi do một nguyên cớ bên ngoài.</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
