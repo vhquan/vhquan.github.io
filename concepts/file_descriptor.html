@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-08-18 Sun 11:05 -->
+<!-- 2024-08-18 Sun 11:39 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>File Descriptor</title>
@@ -22,41 +22,41 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org8f8a602">1. Using file descriptors</a>
+<li><a href="#orgd72ad5f">1. Using file descriptors</a>
 <ul>
-<li><a href="#org554bcb5">1.1. File descriptor tables and system open file tables</a></li>
+<li><a href="#org3bf23e2">1.1. File descriptor tables and system open file tables</a></li>
 </ul>
 </li>
-<li><a href="#org6c1d1ba">2. Is file descriptor table necessary?</a></li>
-<li><a href="#org8c4eba4">3. What are file descriptors, explained in simple terms?</a></li>
-<li><a href="#orgf9c11ec">4. File Descriptor and Inode</a></li>
-<li><a href="#orge00e6c3">5. References</a></li>
+<li><a href="#org2a47436">2. Is file descriptor table necessary?</a></li>
+<li><a href="#orgeaa5c4e">3. What are file descriptors, explained in simple terms?</a></li>
+<li><a href="#org9ddea76">4. File Descriptor and Inode</a></li>
+<li><a href="#orgfeb4e6a">5. References</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org8f8a602" class="outline-2">
-<h2 id="org8f8a602"><span class="section-number-2">1.</span> Using file descriptors</h2>
+<div id="outline-container-orgd72ad5f" class="outline-2">
+<h2 id="orgd72ad5f"><span class="section-number-2">1.</span> Using file descriptors</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 <a href="https://www.ibm.com/docs/en/aix/7.1?topic=volumes-using-file-descriptors">https://www.ibm.com/docs/en/aix/7.1?topic=volumes-using-file-descriptors</a>
 </p>
 
 <div class="org-src-container">
-<pre class="src src-c">#include &lt;stdio.h&gt;
-#include &lt;fcntl.h&gt;
-#include &lt;unistd.h&gt;
+<pre class="src src-c"><span style="font-weight: bold;">#include</span> <span style="font-style: italic;">&lt;stdio.h&gt;</span>
+<span style="font-weight: bold;">#include</span> <span style="font-style: italic;">&lt;fcntl.h&gt;</span>
+<span style="font-weight: bold;">#include</span> <span style="font-style: italic;">&lt;unistd.h&gt;</span>
 
-int main() {
-    int fd;
-    fd = open("1.txt", O_RDONLY);
-    printf("fd = %d\n", fd);
-    fd = open("2.txt", O_RDONLY);
-    printf("fd = %d\n", fd);
-    fd = open("3.txt", O_RDONLY);
-    printf("fd = %d\n", O_RDONLY);
+<span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold;">main</span>() {
+    <span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">fd</span>;
+    fd = open(<span style="font-style: italic;">"1.txt"</span>, O_RDONLY);
+    printf(<span style="font-style: italic;">"fd = %d\n"</span>, fd);
+    fd = open(<span style="font-style: italic;">"2.txt"</span>, O_RDONLY);
+    printf(<span style="font-style: italic;">"fd = %d\n"</span>, fd);
+    fd = open(<span style="font-style: italic;">"3.txt"</span>, O_RDONLY);
+    printf(<span style="font-style: italic;">"fd = %d\n"</span>, O_RDONLY);
 
-    return 0;
+    <span style="font-weight: bold;">return</span> 0;
 }
 </pre>
 </div>
@@ -74,20 +74,20 @@ If run this code, the output will be below
 Let's try another source code:
 </p>
 <div class="org-src-container">
-<pre class="src src-c">#include &lt;stdio.h&gt;
-#include &lt;fcntl.h&gt;
-#include &lt;unistd.h&gt;
+<pre class="src src-c"><span style="font-weight: bold;">#include</span> <span style="font-style: italic;">&lt;stdio.h&gt;</span>
+<span style="font-weight: bold;">#include</span> <span style="font-style: italic;">&lt;fcntl.h&gt;</span>
+<span style="font-weight: bold;">#include</span> <span style="font-style: italic;">&lt;unistd.h&gt;</span>
 
-int main() {
-    int fd;
-    fd = open("1.txt", O_RDONLY);
+<span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold;">main</span>() {
+    <span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">fd</span>;
+    fd = open(<span style="font-style: italic;">"1.txt"</span>, O_RDONLY);
     close(fd);
-    fd = open("2.txt", O_RDONLY);
+    fd = open(<span style="font-style: italic;">"2.txt"</span>, O_RDONLY);
     close(fd);
-    fd = open("3.txt", O_RDONLY);
+    fd = open(<span style="font-style: italic;">"3.txt"</span>, O_RDONLY);
     close(fd);
 
-    return 0;
+    <span style="font-weight: bold;">return</span> 0;
 }
 </pre>
 </div>
@@ -125,8 +125,8 @@ process equal access to the files used by the parent process.
 </p>
 </div>
 
-<div id="outline-container-org554bcb5" class="outline-3">
-<h3 id="org554bcb5"><span class="section-number-3">1.1.</span> File descriptor tables and system open file tables</h3>
+<div id="outline-container-org3bf23e2" class="outline-3">
+<h3 id="org3bf23e2"><span class="section-number-3">1.1.</span> File descriptor tables and system open file tables</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 The file descriptor and open file table structures track each process' access
@@ -136,8 +136,8 @@ to a file and ensure data integrity.
 </div>
 </div>
 
-<div id="outline-container-org6c1d1ba" class="outline-2">
-<h2 id="org6c1d1ba"><span class="section-number-2">2.</span> Is file descriptor table necessary?</h2>
+<div id="outline-container-org2a47436" class="outline-2">
+<h2 id="org2a47436"><span class="section-number-2">2.</span> Is file descriptor table necessary?</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 <a href="https://stackoverflow.com/questions/45418717/is-file-descriptor-table-necessary">https://stackoverflow.com/questions/45418717/is-file-descriptor-table-necessary</a>
@@ -190,8 +190,8 @@ kernel.
 </div>
 </div>
 
-<div id="outline-container-org8c4eba4" class="outline-2">
-<h2 id="org8c4eba4"><span class="section-number-2">3.</span> What are file descriptors, explained in simple terms?</h2>
+<div id="outline-container-orgeaa5c4e" class="outline-2">
+<h2 id="orgeaa5c4e"><span class="section-number-2">3.</span> What are file descriptors, explained in simple terms?</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 <a href="https://stackoverflow.com/questions/5256599/what-are-file-descriptors-explained-in-simple-terms">https://stackoverflow.com/questions/5256599/what-are-file-descriptors-explained-in-simple-terms</a>
@@ -240,8 +240,8 @@ integer and it is called Socket Descriptor.
 </div>
 </div>
 
-<div id="outline-container-orgf9c11ec" class="outline-2">
-<h2 id="orgf9c11ec"><span class="section-number-2">4.</span> File Descriptor and Inode</h2>
+<div id="outline-container-org9ddea76" class="outline-2">
+<h2 id="org9ddea76"><span class="section-number-2">4.</span> File Descriptor and Inode</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Unix makes a clear distinction between the contents of a file and the
@@ -250,8 +250,8 @@ file consists of a sequence of characters. The file does not incly
 </p>
 </div>
 </div>
-<div id="outline-container-orge00e6c3" class="outline-2">
-<h2 id="orge00e6c3"><span class="section-number-2">5.</span> References</h2>
+<div id="outline-container-orgfeb4e6a" class="outline-2">
+<h2 id="orgfeb4e6a"><span class="section-number-2">5.</span> References</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 <a href="https://stackoverflow.com/questions/42979753/what-resources-operating-system-associates-with-file-descriptor?rq=4">https://stackoverflow.com/questions/42979753/what-resources-operating-system-associates-with-file-descriptor?rq=4</a>
