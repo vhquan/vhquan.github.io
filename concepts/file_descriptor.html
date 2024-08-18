@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-08-18 Sun 11:39 -->
+<!-- 2024-08-18 Sun 12:20 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>File Descriptor</title>
@@ -22,21 +22,21 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgd72ad5f">1. Using file descriptors</a>
+<li><a href="#org58750f5">1. Using file descriptors</a>
 <ul>
-<li><a href="#org3bf23e2">1.1. File descriptor tables and system open file tables</a></li>
+<li><a href="#orgf126694">1.1. File descriptor tables and system open file tables</a></li>
 </ul>
 </li>
-<li><a href="#org2a47436">2. Is file descriptor table necessary?</a></li>
-<li><a href="#orgeaa5c4e">3. What are file descriptors, explained in simple terms?</a></li>
-<li><a href="#org9ddea76">4. File Descriptor and Inode</a></li>
-<li><a href="#orgfeb4e6a">5. References</a></li>
+<li><a href="#orga365615">2. Is file descriptor table necessary?</a></li>
+<li><a href="#orgfc5a9a4">3. What are file descriptors, explained in simple terms?</a></li>
+<li><a href="#org6ebba04">4. File Descriptor and Inode</a></li>
+<li><a href="#org8b789ad">5. References</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgd72ad5f" class="outline-2">
-<h2 id="orgd72ad5f"><span class="section-number-2">1.</span> Using file descriptors</h2>
+<div id="outline-container-org58750f5" class="outline-2">
+<h2 id="org58750f5"><span class="section-number-2">1.</span> Using file descriptors</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 <a href="https://www.ibm.com/docs/en/aix/7.1?topic=volumes-using-file-descriptors">https://www.ibm.com/docs/en/aix/7.1?topic=volumes-using-file-descriptors</a>
@@ -125,8 +125,8 @@ process equal access to the files used by the parent process.
 </p>
 </div>
 
-<div id="outline-container-org3bf23e2" class="outline-3">
-<h3 id="org3bf23e2"><span class="section-number-3">1.1.</span> File descriptor tables and system open file tables</h3>
+<div id="outline-container-orgf126694" class="outline-3">
+<h3 id="orgf126694"><span class="section-number-3">1.1.</span> File descriptor tables and system open file tables</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 The file descriptor and open file table structures track each process' access
@@ -136,8 +136,8 @@ to a file and ensure data integrity.
 </div>
 </div>
 
-<div id="outline-container-org2a47436" class="outline-2">
-<h2 id="org2a47436"><span class="section-number-2">2.</span> Is file descriptor table necessary?</h2>
+<div id="outline-container-orga365615" class="outline-2">
+<h2 id="orga365615"><span class="section-number-2">2.</span> Is file descriptor table necessary?</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 <a href="https://stackoverflow.com/questions/45418717/is-file-descriptor-table-necessary">https://stackoverflow.com/questions/45418717/is-file-descriptor-table-necessary</a>
@@ -190,8 +190,8 @@ kernel.
 </div>
 </div>
 
-<div id="outline-container-orgeaa5c4e" class="outline-2">
-<h2 id="orgeaa5c4e"><span class="section-number-2">3.</span> What are file descriptors, explained in simple terms?</h2>
+<div id="outline-container-orgfc5a9a4" class="outline-2">
+<h2 id="orgfc5a9a4"><span class="section-number-2">3.</span> What are file descriptors, explained in simple terms?</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 <a href="https://stackoverflow.com/questions/5256599/what-are-file-descriptors-explained-in-simple-terms">https://stackoverflow.com/questions/5256599/what-are-file-descriptors-explained-in-simple-terms</a>
@@ -240,8 +240,8 @@ integer and it is called Socket Descriptor.
 </div>
 </div>
 
-<div id="outline-container-org9ddea76" class="outline-2">
-<h2 id="org9ddea76"><span class="section-number-2">4.</span> File Descriptor and Inode</h2>
+<div id="outline-container-org6ebba04" class="outline-2">
+<h2 id="org6ebba04"><span class="section-number-2">4.</span> File Descriptor and Inode</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Unix makes a clear distinction between the contents of a file and the
@@ -250,8 +250,8 @@ file consists of a sequence of characters. The file does not incly
 </p>
 </div>
 </div>
-<div id="outline-container-orgfeb4e6a" class="outline-2">
-<h2 id="orgfeb4e6a"><span class="section-number-2">5.</span> References</h2>
+<div id="outline-container-org8b789ad" class="outline-2">
+<h2 id="org8b789ad"><span class="section-number-2">5.</span> References</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 <a href="https://stackoverflow.com/questions/42979753/what-resources-operating-system-associates-with-file-descriptor?rq=4">https://stackoverflow.com/questions/42979753/what-resources-operating-system-associates-with-file-descriptor?rq=4</a>
