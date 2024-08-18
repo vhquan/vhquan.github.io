@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&family=LXGW+WenKai+Mono+TC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&family=LXGW+WenKai+Mono+TC&display=swap');
+
+.title, .content {
+  font-family: "LXGW WenKai Mono TC", monospace;
+  font-size: 12px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+pre, code {
+    font-family: "Fragment Mono", monospace;
+    font-size: 12px;
+    font-style: normal;
+    background-color: #e8e8e8;
+    border-radius: 3px;
+    padding: 3px;
+    border-width: thick;
+}
+
+ul.org-ul {
+    list-style-type: none;
+}
