@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&family=LXGW+WenKai+Mono+TC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
 .title {
-  font-family: "Roboto Mono", monospace;
+  font-family: "Jetbrains Mono", monospace;
   font-optical-sizing: auto;
   font-size: 14px;
   font-weight: 600;
@@ -10,10 +10,10 @@
 }
 
 .content {
-    font-family: "Roboto Mono", monospace;
+    font-family: "Jetbrains Mono", monospace;
     font-optical-sizing: auto;
     font-size: 12px;
-    font-weight: 300;
+    font-weight: 400;
     font-style: normal;
 }
 
@@ -25,4 +25,8 @@ pre, code {
     border-radius: 3px;
     padding: 3px;
     border-width: thick;
+}
+
+ul.org-ul {
+    list-style-type: none;
 }
