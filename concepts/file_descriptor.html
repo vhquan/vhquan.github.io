@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-08-18 Sun 11:05 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>File Descriptor</title>
+<meta name="author" content="devlift" />
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" href="https://vhquan.github.io/css/style.css" type="text/css"/>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href=""> UP </a>
+ |
+ <a accesskey="H" href="/"> HOME </a>
+</div><div id="content" class="content">
+<h1 class="title">File Descriptor</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org8f8a602">1. Using file descriptors</a>
+<ul>
+<li><a href="#org554bcb5">1.1. File descriptor tables and system open file tables</a></li>
+</ul>
+</li>
+<li><a href="#org6c1d1ba">2. Is file descriptor table necessary?</a></li>
+<li><a href="#org8c4eba4">3. What are file descriptors, explained in simple terms?</a></li>
+<li><a href="#orgf9c11ec">4. File Descriptor and Inode</a></li>
+<li><a href="#orge00e6c3">5. References</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org8f8a602" class="outline-2">
+<h2 id="org8f8a602"><span class="section-number-2">1.</span> Using file descriptors</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+<a href="https://www.ibm.com/docs/en/aix/7.1?topic=volumes-using-file-descriptors">https://www.ibm.com/docs/en/aix/7.1?topic=volumes-using-file-descriptors</a>
+</p>
+
+<div class="org-src-container">
+<pre class="src src-c">#include &lt;stdio.h&gt;
+#include &lt;fcntl.h&gt;
+#include &lt;unistd.h&gt;
+
+int main() {
+    int fd;
+    fd = open("1.txt", O_RDONLY);
+    printf("fd = %d\n", fd);
+    fd = open("2.txt", O_RDONLY);
+    printf("fd = %d\n", fd);
+    fd = open("3.txt", O_RDONLY);
+    printf("fd = %d\n", O_RDONLY);
+
+    return 0;
+}
+</pre>
+</div>
+
+<p>
+If run this code, the output will be below
+</p>
+<pre class="example">
+3
+4
+5
+</pre>
+
+<p>
+Let's try another source code:
+</p>
+<div class="org-src-container">
+<pre class="src src-c">#include &lt;stdio.h&gt;
+#include &lt;fcntl.h&gt;
+#include &lt;unistd.h&gt;
+
+int main() {
+    int fd;
+    fd = open("1.txt", O_RDONLY);
+    close(fd);
+    fd = open("2.txt", O_RDONLY);
+    close(fd);
+    fd = open("3.txt", O_RDONLY);
+    close(fd);
+
+    return 0;
+}
+</pre>
+</div>
+
+<p>
+The output when running this below:
+</p>
+<pre class="example">
+3
+3
+3
+</pre>
+
+<p>
+A file descriptor is an unsigned integer used by a process to identify an open
+file.
+</p>
+
+<p>
+The number of file descriptors available to a process is limited by the
+<code>/OPEN_MAX</code> control in the <code>sys/limits.h</code> file. The number of file descriptors is
+also controlled by the <code>ulimit -n</code> flag. The <i>open, pipe, creat,</i> and <i>fcntl</i>
+subroutines all generate file descriptors. File descriptors are generally
+unique to each process, but they can be shared by child processes created with
+a <b>fork</b> subroutine or copied by the <i>fcntl, dup,</i> and <i>dup2</i> subroutines.
+</p>
+
+<p>
+File descriptors are indexes to the file descriptor table in the <i>u<sub>block</sub></i> area
+maintained by the kernel for each process. The most common ways for processes
+to obtain file descriptors are through <i>open</i> and <i>creat</i> operations or through
+inheritance from a parent process. When a <i>fork</i> operation occurs, the
+descriptor table is copied for the child process, which allows the child
+process equal access to the files used by the parent process.
+</p>
+</div>
+
+<div id="outline-container-org554bcb5" class="outline-3">
+<h3 id="org554bcb5"><span class="section-number-3">1.1.</span> File descriptor tables and system open file tables</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+The file descriptor and open file table structures track each process' access
+to a file and ensure data integrity.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6c1d1ba" class="outline-2">
+<h2 id="org6c1d1ba"><span class="section-number-2">2.</span> Is file descriptor table necessary?</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+<a href="https://stackoverflow.com/questions/45418717/is-file-descriptor-table-necessary">https://stackoverflow.com/questions/45418717/is-file-descriptor-table-necessary</a>
+According to what I have read, processes get a fd that indexes into user fd
+table that in turn returns a pointer into file table that maintains offset,
+pointer to inode and other properties of the opened file. So fd is basically
+maintaining a way to access file on disk, its position in the file. So can't
+commands like open directly return pointer into file table rather than going
+through the indirection of user fd table? Is it there for security or for some
+other reason, or have I understood this wrong?
+<img src="../images/fd.png" alt="fd.png" />
+</p>
+
+<p>
+-&gt; Isn't fd table allocated for every new process and file table the global
+   table in the kernel?
+</p>
+
+<p>
+-&gt; That's it. A table in the kernel is necessary to be able to track every
+   open file in the system and manage all of this correctly, and at least some
+   information is needed in the user space of the process.
+</p>
+
+<p>
+-&gt; User space needs to know the file table entries for the files it has opened
+   so you don't system calls directly give a pointer to that instead of going
+   through user fd table.
+</p>
+
+<p>
+-&gt; Because you can't have a user space pointer pointing to something in the
+kernel.
+</p>
+
+<p>
+-&gt; If the program is in user mode the kernel won't allow access to the kernel
+   memory, however if uintptr a = open(&#x2026;); read(a, buffer, sizeof(buffer))
+   the program would go into kernel mode for system calls which will allow the
+   access to kernel memory, so wldnt having a pointer simplify one step for
+   the kernel.
+</p>
+
+<p>
+-&gt; Why would it simplify? An int or a pointer would necessitate the same
+   operations. But using a pointer would mean that the kernel is mapped into
+   the address space of the process, which is probably a too strong constraint
+   on implementation.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8c4eba4" class="outline-2">
+<h2 id="org8c4eba4"><span class="section-number-2">3.</span> What are file descriptors, explained in simple terms?</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+<a href="https://stackoverflow.com/questions/5256599/what-are-file-descriptors-explained-in-simple-terms">https://stackoverflow.com/questions/5256599/what-are-file-descriptors-explained-in-simple-terms</a>
+<a href="https://bottomupcs.com/ch01s03.html">https://bottomupcs.com/ch01s03.html</a>
+</p>
+
+<ol class="org-ol">
+<li>What would be a more simplified description of file descriptors compared to
+Wikipedia's? Why are they required? Say, take shell processes as an example
+and how does it apply for it?</li>
+
+<li>Does a process table contain more than one file descriptor. If yes, why?</li>
+
+<li>What about the concepts of stdin stdout stderr etc? I have an instance like
+say broswer process opened and it has opened some temporary files for
+displayed my html. The process uses the same fd to read/write? Also the
+process table &#x2026; it has entries like fd1 pointer fd1 pointer &#x2026; does that
+mean all these files are in RAM? Why else pointers?</li>
+</ol>
+<hr />
+<p>
+When you open a file, OS creates a stream to that file and connect that stream
+to opened file, the descriptor in fact represents that stream. Similarly there
+are some default streams created by OS. These streams are connected to your
+terminal instead of files. So when you write something in terminal it goes to
+stdin stream and OS. And when you write "ls" command on terminal, the OS
+writes the output to stdout stream. stdout stream is connected to your monitor
+terminal so you can see the output there.
+</p>
+<hr />
+<p>
+In simple words, when you open a file, the operating system creates an entry
+to represent that file and store the information about that opened file. So if
+there are 100 files opened in your OS then there will be 100 entries in OS
+(somewhere in kernel). These entries are represented by integers like (&#x2026;100,
+101, 102, &#x2026;). This entry number is the file descriptor. So it is just an
+integer number that uniquely represents an opened file for the process. If
+your process open 10 files then your process table will have 10 entries for
+file descriptors.
+</p>
+
+<p>
+Similarly, when you open a network socket, it is also represented by an
+integer and it is called Socket Descriptor. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf9c11ec" class="outline-2">
+<h2 id="orgf9c11ec"><span class="section-number-2">4.</span> File Descriptor and Inode</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Unix makes a clear distinction between the contents of a file and the
+information about a file. With the exception of device and special files, each
+file consists of a sequence of characters. The file does not incly
+</p>
+</div>
+</div>
+<div id="outline-container-orge00e6c3" class="outline-2">
+<h2 id="orge00e6c3"><span class="section-number-2">5.</span> References</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+<a href="https://stackoverflow.com/questions/42979753/what-resources-operating-system-associates-with-file-descriptor?rq=4">https://stackoverflow.com/questions/42979753/what-resources-operating-system-associates-with-file-descriptor?rq=4</a>
+</p>
+
+<p>
+<a href="https://stackoverflow.com/questions/2519973/file-descriptors-and-open-files?rq=4">https://stackoverflow.com/questions/2519973/file-descriptors-and-open-files?rq=4</a>
+</p>
+
+<p>
+<a href="https://linuxtldr.com/file-descriptors-linux/">https://linuxtldr.com/file-descriptors-linux/</a>
+</p>
+
+<p>
+<a href="https://chenshuo.com/notes/kernel/file-descriptor-table/">https://chenshuo.com/notes/kernel/file-descriptor-table/</a>
+</p>
+
+<p>
+<a href="https://copyprogramming.com/howto/what-is-a-file-descriptor-in-linux#sockets-and-file-descriptors">https://copyprogramming.com/howto/what-is-a-file-descriptor-in-linux#sockets-and-file-descriptors</a>
+</p>
+
+<p>
+<a href="https://www.ibm.com/docs/en/aix/7.1?topic=volumes-using-file-descriptors">https://www.ibm.com/docs/en/aix/7.1?topic=volumes-using-file-descriptors</a>
+</p>
+
+<p>
+<a href="https://stackoverflow.com/questions/17370015/how-does-a-system-call-know-what-process-a-file-descriptor-belong-to">https://stackoverflow.com/questions/17370015/how-does-a-system-call-know-what-process-a-file-descriptor-belong-to</a>
+</p>
+
+<p>
+<a href="https://www.unix.com/unix-for-advanced-and-expert-users/45996-file-descriptor-table.html">https://www.unix.com/unix-for-advanced-and-expert-users/45996-file-descriptor-table.html</a>
+</p>
+
+<p>
+<a href="https://biriukov.dev/docs/fd-pipe-session-terminal/1-file-descriptor-and-open-file-description/">https://biriukov.dev/docs/fd-pipe-session-terminal/1-file-descriptor-and-open-file-description/</a>
+</p>
+
+<p>
+<a href="https://www.ibm.com/docs/en/aix/7.1?topic=volumes-using-file-descriptors">https://www.ibm.com/docs/en/aix/7.1?topic=volumes-using-file-descriptors</a>
+</p>
+
+<p>
+<a href="https://bottomupcs.com/ch01s03.html">https://bottomupcs.com/ch01s03.html</a>
+</p>
+
+<p>
+<a href="https://medium.com/@dhar.ishan04/here-is-all-you-need-to-know-about-file-descriptors-in-linux-d93f05166026">https://medium.com/@dhar.ishan04/here-is-all-you-need-to-know-about-file-descriptors-in-linux-d93f05166026</a>
+</p>
+</div>
+</div>
+</div>
+</body>
+</html>

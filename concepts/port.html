@@ -1,7 +1,36 @@
-#+title: port
-#+date: <2023-11-15 Wed 21:18>
-#+author: devlift
-
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-08-18 Sun 11:05 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>port</title>
+<meta name="author" content="devlift" />
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" href="https://vhquan.github.io/css/style.css" type="text/css"/>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href=""> UP </a>
+ |
+ <a accesskey="H" href="/"> HOME </a>
+</div><div id="content" class="content">
+<h1 class="title">port</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org5eea7ff">1. What is a computer port?</a></li>
+<li><a href="#org3dd1625">2. What is a computer network port?</a></li>
+<li><a href="#orgbad94bd">3. How do network ports affect cybersecurity?</a></li>
+<li><a href="#org02a2b45">4. What is a computer hardware port?</a></li>
+<li><a href="#org6dddd5c">5. What is a computer software port?</a></li>
+</ul>
+</div>
+</div>
+<p>
 IP address is your house no. You can reach the house by just knowing the house
 no, but there are 10 members within a house. Who should receive the parcel?
 The receiver is identified by port. The person whose name is on the parcel
@@ -10,64 +39,92 @@ are so many applications running on your system, which application should
 receive the packet? It is decide by port. So, IP address is the idenfier of
 your system and port no is the identifier of application running on that
 system
+</p>
 
------
+<hr />
 
+<p>
 I like to think of networking in terms of real life. So if the computer is my
 home, IP address is the street number, and MAC the house number. But that's
 not all you need to enter my house, is it?
+</p>
 
+<p>
 You need doors too, or maybe a window, to enter the house.
+</p>
 
+<p>
 Thats what ports are.
+</p>
 
+<p>
 Now generally a house has doors on one of the vertical walls. So you circle
 around the house, find such a door and try to enter. These are the
 well-defined ports, whose port numbers are fixed, and any basic port scan will
 scan these ones.
+</p>
 
+<p>
 But what if I have an underground door. Or maybe I have a door on the
 horizontal wall (roof). These are the other port numbers.
+</p>
 
+<p>
 So your machine will know the well defined port numbers, but if you want to
 connect to a server, say foo, but food has moved its http server from port 80
 to port 34251, then you will be unable to find it, as by default, your browser
 will try co connect to port 80 and find it closed. 
+</p>
 
------
+<hr />
 
-* What is a computer port?
-
+<div id="outline-container-org5eea7ff" class="outline-2">
+<h2 id="org5eea7ff"><span class="section-number-2">1.</span> What is a computer port?</h2>
+<div class="outline-text-2" id="text-1">
+<p>
 A port in computing has three main uses, each as a type of receptable in
 networking, computer hardware and software:
+</p>
 
-1. A port in networking is a software-defined number associated to a network
-   protocol that receives or transmits communication for a specific service.
+<ol class="org-ol">
+<li>A port in networking is a software-defined number associated to a network
+protocol that receives or transmits communication for a specific service.</li>
 
-2. A port in computer hardware is a jack or socket that peripheral hardware
-   plugs into.
+<li>A port in computer hardware is a jack or socket that peripheral hardware
+plugs into.</li>
 
-3. A port in computer software is when a piece of software has been translated
-   or converted to run on different hardware or operating system (OS) that it
-   was originally designed for.
+<li>A port in computer software is when a piece of software has been translated
+or converted to run on different hardware or operating system (OS) that it
+was originally designed for.</li>
+</ol>
+</div>
+</div>
 
-* What is a computer network port?
-
+<div id="outline-container-org3dd1625" class="outline-2">
+<h2 id="org3dd1625"><span class="section-number-2">2.</span> What is a computer network port?</h2>
+<div class="outline-text-2" id="text-2">
+<p>
 A port in computer networking is how a computer can use a single physical
 network connection to handle many incomming and outgoing requests by assigning
 a port number to each. The numbers go from 0 to 65535, which is a 16-bit
 number.
+</p>
 
+<p>
 Some of these port numbers are specifically defined and always associated with
-a specific type of service -- for example. File Transfer Protocol (FTP) is
+a specific type of service &#x2013; for example. File Transfer Protocol (FTP) is
 always port number 21 and Hyper Text Transfer Protocol (HTTP) web traffic is
-always port 80. These are called /well-known ports/ and go from 0 to 1023.
+always port 80. These are called <i>well-known ports</i> and go from 0 to 1023.
+</p>
 
-The numbers from 1024 to 49151 are called /registered ports/ and can be
+<p>
+The numbers from 1024 to 49151 are called <i>registered ports</i> and can be
 registered with the Internet Assigned Numbers Authority for a specific
 use. The numbers 49152 to 65535 are unassigned, can be used by any type of
-service and are called /dynamic ports, private ports/ or /ephemeral ports/.
+service and are called <i>dynamic ports, private ports</i> or <i>ephemeral ports</i>.
+</p>
 
+<p>
 As an illustration, think of a port number as a telephone extension in a
 business telephone system. The company telephone number is like the computer
 Internet Protocol (IP) address or Uniform Resource Locator (URL). It connects
@@ -77,66 +134,108 @@ organization, however, and the port will connect them to the right service on
 a computer. Dialing extension 0 to speak to an operator is extremely common in
 all phone systems and is like the well-known ports that always define specific
 services.
+</p>
 
+<p>
 A port is always associated with a protocol. Generally, this is with
 Transmission Control Protocol or User Datagram Protocol for communication, but
 Internet Control Message Protocol messages use specific ports as well. The
 port is specified by having the URL or IP address followed by a colon then the
-port number -- as examples, 10.0.0.1:80 or www.techtarget.com:443. With all
+port number &#x2013; as examples, 10.0.0.1:80 or www.techtarget.com:443. With all
 internet communication, there is always an associated port, but it may not be
 shown to the user as it is often implied by the type of communication.
+</p>
 
+<p>
 A computer can manage many simulatenous connections on a single inbound
 port. This is because the local IP address, local port, remote IP address and
 remote port specify each connection. A listening port is when the computer is
 actively waiting for inbound requests on that port number , allowing those
 connections. Port forwarding is when communication to one address on a
 specific port is then sent, or forwarded, to another computer for processing.
+</p>
+</div>
+</div>
 
-* How do network ports affect cybersecurity?
+<div id="outline-container-orgbad94bd" class="outline-2">
+<h2 id="orgbad94bd"><span class="section-number-2">3.</span> How do network ports affect cybersecurity?</h2>
+<div class="outline-text-2" id="text-3">
+<p>
 Network ports are a major factor in network security and cybersecurity in
 general.
+</p>
 
+<p>
 Port scanning, for example, tries all ports at an address to see which ones
 are open and listening. Attackers can use this to find vulnerable services
 that they can then attack.
+</p>
 
+<p>
 Firewalls take the port number into consideration when determining to allow or
 block communication. They are configured to only allow communication to the
 specific ports needed for a service and block other unneeded ports so they
 cannot be exploited.
+</p>
 
+<p>
 As an example, of ports in use, say a company wants to have a website, email
 and secure file transfer service on the internet. Its firewall would allow
 inbound connections to port 80 and 443 for web traffic, port 25 for inbound
 email and port 22 for Secure Shell FTP (SFTP). It forwards these ports to the
 specific servers for each type of service. The firewall will block all other
 ports.
+</p>
 
+<p>
 So, if an employee incorrectly tries to use FTP on port 21 instead of SFTP, it
 will be blocked. Or, for instance, if an attacker tries to connect to port
 3389 for Window Remote Desktop to gain control of a server, the firewall will
 block the connection.
+</p>
+</div>
+</div>
 
-* What is a computer hardware port?
+<div id="outline-container-org02a2b45" class="outline-2">
+<h2 id="org02a2b45"><span class="section-number-2">4.</span> What is a computer hardware port?</h2>
+<div class="outline-text-2" id="text-4">
+<p>
 In computer hardware, a port is the jack or receptable for some other
 peripheral device to plug into. These are standardized for each purpose.
+</p>
 
+<p>
 Some common ports are Universal Serial Bus ports, USB-C ports, Ethernet ports
 or DisplayPorts. Some older ports no longer in common use are serial ports,
 parallel ports and mouse/keyboard PS/2 ports. As a general guideline, if the
-plug receptable is on a computer, it is called a /port/; if the receptable is on
-a wall, it is called a /jack/.
+plug receptable is on a computer, it is called a <i>port</i>; if the receptable is on
+a wall, it is called a <i>jack</i>.
+</p>
+</div>
+</div>
 
-* What is a computer software port?
-In computer software, the verb /porting/ is the process by which software is
+<div id="outline-container-org6dddd5c" class="outline-2">
+<h2 id="org6dddd5c"><span class="section-number-2">5.</span> What is a computer software port?</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+In computer software, the verb <i>porting</i> is the process by which software is
 changed or translated to run on different hardware types or OSes than it ws
-originally programmed for. The result can be called a /port/ of the Software.
+originally programmed for. The result can be called a <i>port</i> of the Software.
+</p>
 
+<p>
 Example of this include the following:
-- Microsoft originally programmed Windows 10 to run on x86 processors but is
-  now porting Windows to also run on Arm processors.
-- Microsoft programmed Office to run on Window OSes, but a port of Office is
-  also available for macOS.
-- Porting games originally designed to run on one video game console to run on
-  another type of console is also common.
+</p>
+<ul class="org-ul">
+<li>Microsoft originally programmed Windows 10 to run on x86 processors but is
+now porting Windows to also run on Arm processors.</li>
+<li>Microsoft programmed Office to run on Window OSes, but a port of Office is
+also available for macOS.</li>
+<li>Porting games originally designed to run on one video game console to run on
+another type of console is also common.</li>
+</ul>
+</div>
+</div>
+</div>
+</body>
+</html>
