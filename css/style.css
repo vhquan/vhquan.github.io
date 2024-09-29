@@ -1,34 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Fragment+Mono:ital@0;1&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
 
-.title {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
   font-family: "Vollkorn", serif;
   font-optical-sizing: auto;
+  font-size: 1.6rem; /* 16px */
+  font-weight: 400;
+  font-style: normal;
+  text-align: justify;
+  margin: 10px; /* Added margin to each side */
+}
+
+.title {
   font-size: 2.4rem; /* 24px */
   font-weight: 600;
-  font-style: normal;
 }
 
 h1 {
-    font-family: "Vollkorn", serif;
-    font-optical-sizing: auto;
     font-size: 2rem; /* 20px */
 }
 
 h2 {
-    font-family: "Vollkorn", serif;
-    font-optical-sizing: auto;
     font-size: 1.8rem; /* 18px */
 }
 
 h3 {
-    font-family: "Vollkorn", serif;
-    font-optical-sizing: auto;
     font-size: 1.6rem; /* 16px */
 }
 
 .content {
     font-family: "Bona Nova", serif;
-    font-optical-sizing: auto;
     font-size: 1.6rem; /* 16px */
     font-weight: 400;
     font-style: normal;
