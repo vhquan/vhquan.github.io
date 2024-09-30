@@ -6,6 +6,11 @@
   padding: 0;
 }
 
+.org-ul {
+    display: list-item;
+    list-style-position: inside;
+}
+
 body {
   font-family: "Vollkorn", serif;
   font-optical-sizing: auto;
