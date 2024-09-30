@@ -23,9 +23,12 @@ body {
 
 h1 {
     font-size: 2rem; /* 20px */
-    border: 2px solid #ddd; /* Added border to create a box */
     padding: 10px; /* Added padding for spacing inside the box */
     margin: 10px 0; /* Added margin for spacing around the box */
+}
+
+h2, h3 {
+    font-style: italic; /* Italicized all h tags except h1 */
 }
 
 h2 {
@@ -53,21 +56,22 @@ pre, code {
     border-width: thick;
 }
 
+ul {
+    list-style-type: disc; /* Added bullet to every item in <ul> */
+}
+
 @media (max-width: 768px) {
     .title {
         font-size: 2rem; /* Adjusted for smaller screens */
     }
     h1 {
         font-size: 1.8rem; /* Adjusted for smaller screens */
-        border: 2px solid #ddd; /* Adjusted border for smaller screens */
         padding: 10px; /* Adjusted padding for smaller screens */
         margin: 10px 0; /* Adjusted margin for smaller screens */
     }
-    h2 {
-        font-size: 1.6rem; /* Adjusted for smaller screens */
-    }
-    h3 {
+    h2, h3 {
         font-size: 1.4rem; /* Adjusted for smaller screens */
+        font-style: italic; /* Italicized all h tags except h1 */
     }
     .content {
         font-size: 1.4rem; /* Adjusted for smaller screens */
@@ -76,4 +80,3 @@ pre, code {
         font-size: 1.3rem; /* Adjusted for smaller screens */
     }
 }
-
