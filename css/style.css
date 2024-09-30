@@ -28,10 +28,6 @@ h1 {
 }
 
 h2, h3 {
-    font-style: italic; /* Italicized all h tags except h1 */
-}
-
-h2 {
     font-size: 1.8rem; /* 18px */
 }
 
@@ -71,7 +67,6 @@ ul {
     }
     h2, h3 {
         font-size: 1.4rem; /* Adjusted for smaller screens */
-        font-style: italic; /* Italicized all h tags except h1 */
     }
     .content {
         font-size: 1.4rem; /* Adjusted for smaller screens */
