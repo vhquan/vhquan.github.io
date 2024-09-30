@@ -57,10 +57,6 @@ pre, code {
     border-width: thick;
 }
 
-ul {
-    list-style-type: disc; /* Added bullet to every item in <ul> */
-}
-
 @media (max-width: 768px) {
     .title {
         font-size: 2rem; /* Adjusted for smaller screens */
