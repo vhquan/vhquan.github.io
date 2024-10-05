@@ -14,7 +14,7 @@
 body {
   font-family: "Vollkorn", serif;
   font-optical-sizing: auto;
-  font-size: 1.2rem; /* 16px */
+  font-size: 1rem; 
   font-weight: 400;
   font-style: normal;
   text-align: justify;
@@ -22,34 +22,34 @@ body {
 }
 
 .title {
-  font-size: 2.4rem; /* 24px */
+  font-size: 1.2rem; 
   font-weight: 600;
 }
 
 h1 {
-    font-size: 1.4rem; /* 20px */
+    font-size: 1.2rem; 
     padding: 10px; /* Added padding for spacing inside the box */
     margin: 10px 0; /* Added margin for spacing around the box */
 }
 
 h2, h3 {
-    font-size: 1.4rem; /* 18px */
+    font-size: 1.2rem; 
 }
 
 h3 {
-    font-size: 1.4rem; /* 16px */
+    font-size: 1.2rem; 
 }
 
 .content {
     font-family: "Bona Nova", serif;
-    font-size: 1.2rem; /* 16px */
+    font-size: 1rem; 
     font-weight: 400;
     font-style: normal;
 }
 
 pre, code {
     font-family: "Fragment Mono", monospace;
-    font-size: 1.5rem; /* 15px */
+    font-size: 1.2rem; /* 15px */
     font-style: normal;
     background-color: #e8e8e8;
     border-radius: 3px;
@@ -59,20 +59,20 @@ pre, code {
 
 @media (max-width: 768px) {
     .title {
-        font-size: 2rem; /* Adjusted for smaller screens */
+        font-size: 1.2rem; /* Adjusted for smaller screens */
     }
     h1 {
-        font-size: 1.4rem; /* Adjusted for smaller screens */
+        font-size: 1.2rem; /* Adjusted for smaller screens */
         padding: 10px; /* Adjusted padding for smaller screens */
         margin: 10px 0; /* Adjusted margin for smaller screens */
     }
     h2, h3 {
-        font-size: 1.4rem; /* Adjusted for smaller screens */
-    }
-    .content {
         font-size: 1.2rem; /* Adjusted for smaller screens */
     }
+    .content {
+        font-size: 1rem; /* Adjusted for smaller screens */
+    }
     pre, code {
-        font-size: 1.4rem; /* Adjusted for smaller screens */
+        font-size: 1rem; /* Adjusted for smaller screens */
     }
 }
