@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-10-08 Tue 21:03 -->
+<!-- 2024-10-08 Tue 21:58 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Some tips when writing a org in Emacs</title>
@@ -18,8 +18,8 @@
 </div><div id="content" class="content">
 <h1 class="title">Some tips when writing a org in Emacs</h1>
 
-<div id="outline-container-org92642c9" class="outline-2">
-<h2 id="org92642c9"><span class="section-number-2">1.</span> Table of contents</h2>
+<div id="outline-container-orgced9da9" class="outline-2">
+<h2 id="orgced9da9"><span class="section-number-2">1.</span> Table of contents</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 The table of contents includes all headlines in the document. If you need to
@@ -28,17 +28,15 @@ variable accordingly. You can achieve the same on a per file basis, using the
 following '<b>toc</b>' item in '<b>OPTIONS</b>' keyword:
 </p>
 
-<p>
-```
-</p>
-<p>
-```
-</p>
+<pre class="example">
+#+OPTION: toc:2     (only include two levels in TOC)
+#+OPTION: toc:nil   (no default TOC at all)
+</pre>
 </div>
 </div>
 
-<div id="outline-container-org988029e" class="outline-2">
-<h2 id="org988029e"><span class="section-number-2">2.</span> Emphasis and Monospace</h2>
+<div id="outline-container-org05105b0" class="outline-2">
+<h2 id="org05105b0"><span class="section-number-2">2.</span> Emphasis and Monospace</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 You can make words '<b>bold</b>', '<i>italic</i>', '<sub>underlined</sub>_', '<code>verbatim</code>' and
@@ -47,8 +45,8 @@ You can make words '<b>bold</b>', '<i>italic</i>', '<sub>underlined</sub>_', '<c
 </div>
 </div>
 
-<div id="outline-container-orge5b2023" class="outline-2">
-<h2 id="orge5b2023"><span class="section-number-2">3.</span> Special symbols</h2>
+<div id="outline-container-org9021a3f" class="outline-2">
+<h2 id="org9021a3f"><span class="section-number-2">3.</span> Special symbols</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 You can use LaTeX-like syntax to insert special symbols - named entities -
