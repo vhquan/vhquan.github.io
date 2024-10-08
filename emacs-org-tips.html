@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-10-08 Tue 21:03 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Some tips when writing a org in Emacs</title>
+<meta name="author" content="devlift" />
+<meta name="generator" content="Org Mode" />
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href=""> UP </a>
+ |
+ <a accesskey="H" href="/"> HOME </a>
+</div><div id="content" class="content">
+<h1 class="title">Some tips when writing a org in Emacs</h1>
+
+<div id="outline-container-org92642c9" class="outline-2">
+<h2 id="org92642c9"><span class="section-number-2">1.</span> Table of contents</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+The table of contents includes all headlines in the document. If you need to
+use a different depth, or turn it off entirely, set the <code>org-export-with-toc</code>
+variable accordingly. You can achieve the same on a per file basis, using the
+following '<b>toc</b>' item in '<b>OPTIONS</b>' keyword:
+</p>
+
+<p>
+```
+</p>
+<p>
+```
+</p>
+</div>
+</div>
+
+<div id="outline-container-org988029e" class="outline-2">
+<h2 id="org988029e"><span class="section-number-2">2.</span> Emphasis and Monospace</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+You can make words '<b>bold</b>', '<i>italic</i>', '<sub>underlined</sub>_', '<code>verbatim</code>' and
+'<code>code</code>', and, if you must, '<del>strike-through</del>'. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge5b2023" class="outline-2">
+<h2 id="orge5b2023"><span class="section-number-2">3.</span> Special symbols</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+You can use LaTeX-like syntax to insert special symbols - named entities -
+like '&alpha;' to indicate the Greek letter, or '&rarr;' to indicate an arrow.
+Completion for these symbols is available, just type '\' and maybe a few
+letters, and press <code>M-TAB</code> to see possible completions. If you need such a
+symbol inside a word, terminate it with a pair of curly brackets. For example:
+</p>
+
+<blockquote>
+<p>
+Pro tip: Given a circle &Gamma; of diameter d, the length of its circumference
+is &pi;d.
+</p>
+</blockquote>
+</div>
+</div>
+</div>
+</body>
+</html>
