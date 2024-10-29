@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-10-08 Tue 21:58 -->
+<!-- 2024-10-29 Tue 20:37 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Networking - Docker</title>
@@ -26,27 +26,10 @@ within the Docker Compose environment.
 Here's a breakdown of how it works:
 </p>
 <ul class="org-ul">
-<li><b>Docker compose network</b>: When you see Docker compose to start multiple</li>
+<li><b>Docker compose network</b>: When you see Docker compose to start multiple containers, it creates a network for them to communicate with each other. This network allows containers to discover and reach each other using their container names or IP addresses.</li>
+<li><b>Nginx configuration</b>: In the Nginx configuration file, you specify the target container or IP address where the web app is running. This information is used by Nginx to forward requests to the correct container.</li>
+<li><b>Container Resolution</b>: Nginx uses the Docker compose network to resolve the container name or IP address. This means that Nginx can look up the container's network details and establish a connection to it.</li>
 </ul>
-<p>
-containers, it creates a network for them to communicate with each other. This
-network allows containers to discover and reach each other using their
-container names or IP addresses.
-</p>
-<ul class="org-ul">
-<li><b>Nginx configuration</b>: In the Nginx configuration file, you specify the</li>
-</ul>
-<p>
-target container or IP address where the web app is running. This information
-is used by Nginx to forward requests to the correct container.
-</p>
-<ul class="org-ul">
-<li><b>Container Resolution</b>: Nginx uses the Docker compose network to resolve the</li>
-</ul>
-<p>
-container name or IP address. This means that Nginx can look up the
-container's network details and establish a connection to it.
-</p>
 
 <p>
 &rarr; Docker compose resolves the <code>webapp</code> container name to its IP address
