@@ -1,0 +1,89 @@
+/* Base font for regular text */
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Code blocks */
+pre, code {
+    font-family: 'Fira Mono', monospace;
+    background-color: #f5f5f5;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+pre {
+    padding: 1em;
+    overflow-x: auto;
+}
+
+/* Links */
+a {
+    color: #0366d6;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 0.5rem;
+    max-width: 100%;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #1a1a1a;
+    color: #e6e6e6;
+  }
+  
+  pre, code {
+    background-color: #2d2d2d;
+  }
+  
+  a {
+    color: #58a6ff;
+  }
+}
+
+p {
+  margin: 1em 0;
+}
+
+/* Navigation header */
+.nav-header {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e1e4e8;
+}
+
+.nav-header a {
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+.nav-header a:hover {
+    text-decoration: none;
+    background-color: #f6f8fa;
+}
+
+@media (prefers-color-scheme: dark) {
+    .nav-header {
+        border-bottom-color: #30363d;
+    }
+    
+    .nav-header a:hover {
+        background-color: #21262d;
+    }
+}
