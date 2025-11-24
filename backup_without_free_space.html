@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backup without free space</title>
+    <link rel="stylesheet" href="/style/style.css">
+    <style>
+        .home-nav {
+            padding: 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .home-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            color: #333;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .home-button:hover {
+            background-color: #f0f0f0;
+        }
+        .container {
+            display: flex;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+            position: relative;
+        }
+        .sidebar {
+            position: sticky;
+            top: 1rem;
+            width: 250px;
+            height: fit-content;
+            padding: 1rem;
+            border-right: 1px solid #e0e0e0;
+            background: white;
+            transition: transform 0.3s ease;
+        }
+        .sidebar h3 {
+            margin-top: 0;
+            color: #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .toc-nav ul {
+            list-style: none;
+            padding-left: 1rem;
+            margin: 0;
+        }
+        .toc-nav li {
+            margin: 0.5rem 0;
+        }
+        .toc-nav a {
+            color: #666;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+            display: block;
+        }
+        .toc-nav a:hover {
+            color: #000;
+        }
+        .content {
+            flex: 1;
+            max-width: 800px;
+        }
+        .toc-toggle {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #333;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                height: 100vh;
+                z-index: 999;
+                transform: translateX(-100%);
+                border-right: none;
+                box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            }
+            .sidebar.active {
+                transform: translateX(0);
+            }
+            .toc-toggle {
+                display: block;
+            }
+            .content {
+                max-width: 100%;
+            }
+        }
+    </style>
+    <!-- Highlight.js for code syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <!-- Additional language support -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/rust.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/cpp.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/json.min.js"></script>
+</head>
+<body>
+    <nav class="home-nav">
+        <a href="/" class="home-button">← Home</a>
+    </nav>
+    <div class="container">
+        <button class="toc-toggle" aria-label="Toggle table of contents">☰</button>
+        <div class="sidebar" id="toc">
+            <h3>
+                On this page
+                <button onclick="this.closest('.sidebar').classList.remove('active')" 
+                        style="border: none; background: none; font-size: 1.2rem; cursor: pointer; padding: 0;"
+                        aria-label="Close table of contents">×</button>
+            </h3>
+            <nav class="toc-nav"></nav>
+        </div>
+        <div class="content">
+        
+        <div class="post-metadata">
+            <h1>Backup without free space</h1>
+            <div class="metadata">
+                <p class="date">2025-11-25</p>
+                <p class="author">By Hong Quan</p>
+                
+                <div class="tags">
+                    
+                    <a href="/tags/linux.html" class="tag">linux</a>
+                    
+                </div>
+                
+                
+                <div class="summary">
+                    <p>A way to do backup if a serve is out of disk space</p>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <p>Sometimes your server runs out of disk space and you can't create a <code>.zip</code> or
+<code>.tar.gz</code> file, you can still <em>compress and send it directly to another
+server</em> without using extra space:</p>
+<pre><code>tar czf --C /home/user public_html | ssh user@server-backup &quot;cat &gt;
+/opt/website_backup.tar.gz&quot;
+</code></pre>
+<h2>Explanation</h2>
+<ul>
+<li><code>tar czf --C /home/user public_html</code> -&gt; Compress the public_html folder and
+output to stdout.</li>
+<li>| -&gt; pipe the compressed data to the next command.</li>
+<li><code>ssh user@server-backup &quot;cat &gt; /opt/website_backup.tar.gz&quot;</code> -&gt; write the
+data directly into a backup file on the remote server.</li>
+</ul>
+
+    </div>
+    </div>
+    <div class="footnote">
+        <a href="/">Back to Home</a>
+    </div>
+    <script>
+        // Generate table of contents
+        function generateTOC() {
+            const content = document.querySelector('.content');
+            const toc = document.querySelector('.toc-nav');
+            const headings = content.querySelectorAll('h1, h2, h3, h4, h5, h6');
+            
+            if (headings.length === 0) {
+                document.querySelector('.sidebar').style.display = 'none';
+                return;
+            }
+
+            const ul = document.createElement('ul');
+            headings.forEach((heading, index) => {
+                // Add ID to heading if it doesn't have one
+                if (!heading.id) {
+                    heading.id = `heading-${index}`;
+                }
+
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.href = `#${heading.id}`;
+                a.textContent = heading.textContent;
+                a.style.paddingLeft = `${(parseInt(heading.tagName[1]) - 1) * 0.5}rem`;
+                li.appendChild(a);
+                ul.appendChild(li);
+            });
+            toc.appendChild(ul);
+        }
+
+        // Initialize syntax highlighting
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('pre code').forEach((block) => {
+                hljs.highlightElement(block);
+            });
+            generateTOC();
+
+            // Mobile TOC toggle
+            const tocToggle = document.querySelector('.toc-toggle');
+            const sidebar = document.querySelector('.sidebar');
+            
+            tocToggle.addEventListener('click', () => {
+                sidebar.classList.add('active');
+            });
+
+            // Close TOC when clicking a link on mobile
+            document.querySelector('.toc-nav').addEventListener('click', (e) => {
+                if (window.innerWidth <= 768 && e.target.tagName === 'A') {
+                    sidebar.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
