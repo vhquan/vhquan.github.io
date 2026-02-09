@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logical implication</title>
+    <link rel="stylesheet" href="/style/style.css">
+    <style>
+        .home-nav {
+            padding: 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .home-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            color: #333;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .home-button:hover {
+            background-color: #f0f0f0;
+        }
+        .container {
+            display: flex;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+            position: relative;
+        }
+        .sidebar {
+            position: sticky;
+            top: 1rem;
+            width: 250px;
+            height: fit-content;
+            padding: 1rem;
+            border-right: 1px solid #e0e0e0;
+            background: white;
+            transition: transform 0.3s ease;
+        }
+        .sidebar h3 {
+            margin-top: 0;
+            color: #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .toc-nav ul {
+            list-style: none;
+            padding-left: 1rem;
+            margin: 0;
+        }
+        .toc-nav li {
+            margin: 0.5rem 0;
+        }
+        .toc-nav a {
+            color: #666;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+            display: block;
+        }
+        .toc-nav a:hover {
+            color: #000;
+        }
+        .content {
+            flex: 1;
+            max-width: 800px;
+        }
+        .toc-toggle {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #333;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                height: 100vh;
+                z-index: 999;
+                transform: translateX(-100%);
+                border-right: none;
+                box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            }
+            .sidebar.active {
+                transform: translateX(0);
+            }
+            .toc-toggle {
+                display: block;
+            }
+            .content {
+                max-width: 100%;
+            }
+        }
+    </style>
+    <!-- Highlight.js for code syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <!-- Additional language support -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/rust.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/cpp.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/json.min.js"></script>
+</head>
+<body>
+    <nav class="home-nav">
+        <a href="/" class="home-button">← Home</a>
+    </nav>
+    <div class="container">
+        <button class="toc-toggle" aria-label="Toggle table of contents">☰</button>
+        <div class="sidebar" id="toc">
+            <h3>
+                On this page
+                <button onclick="this.closest('.sidebar').classList.remove('active')" 
+                        style="border: none; background: none; font-size: 1.2rem; cursor: pointer; padding: 0;"
+                        aria-label="Close table of contents">×</button>
+            </h3>
+            <nav class="toc-nav"></nav>
+        </div>
+        <div class="content">
+        
+        <div class="post-metadata">
+            <h1>Logical implication</h1>
+            <div class="metadata">
+                <p class="date">2026-02-09</p>
+                <p class="author">By Hong Quan</p>
+                
+                <div class="tags">
+                    
+                    <a href="/tags/math.html" class="tag">math</a>
+                    
+                </div>
+                
+                
+                <div class="summary">
+                    <p>A false proposition implies any proposition</p>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <p>First off, by a &quot;proposition&quot; I simply mean an expression that has a clear
+Boolean value. Propositions can be combined into larger propositions by using
+the &quot;not, &quot;and&quot; and &quot;or&quot; operations that we are all familiar with. &quot;Socrates
+is a cat or it is raining&quot; is true if either of its sub-propositions are true,
+and false otherwise. </p>
+<p>Those are operations are all uncontroversial. But we run into big problems
+when we try to come up with a definition for a proposition of the form &quot;if P
+then Q&quot;, or, as it is traditionally notated, P -&gt; Q. P here is the
+&quot;antecedent&quot; and Q is the &quot;consequent&quot;.</p>
+<p><strong>The first thing we have to emphasized is that the implication operation does
+not suggest that there is a causal relationship</strong>. We usually speak of
+implications that have a causal relationship: &quot;if it is raining then the
+streets are wet&quot;. But the implication proposition &quot;if it is raining then
+Minerva is a cat&quot; needs to have a truth value irrespective of the fact that
+there is no obvious causal connection between the weather in Seattle and the
+name of my elderly cat. </p>
+<h2>Explanation</h2>
+<p>So what then should be the rules for the truth value of P -&gt; Q, given truth
+values for P and Q?</p>
+<p>Plainly if P is true and Q is false then the implication was false. If we have
+a situation where the antecedent is true but the consequent is false then the
+implication was a false statement. That is, if some day it is raining but the
+streets are, bizarrely, not wet, the &quot;if it is raining the streets are wet&quot;
+must have been false. </p>
+<p>Similarly if P is true and Q is true then the implication was true. If it is
+the case that it is raining and Minerva is a cat then we can conclude that the
+implication proposition is true, end of story. Again, remember, the truth of
+the implication is simply that if the antecedent was true then the consequent
+turned out to be true, not that there was a causal connection.</p>
+<p>That's pretty uncontroversial. The problems arise when the antecedent is
+false. What is the truth value of P -&gt; Q when P is false? In traditional
+propositional logic an implication proposition with a false antecedent is
+considered a true statement, regardless of the truth of the consequent. That
+is, &quot;if Socrates is immortal then the streets are wet&quot; is a true proposition,
+regardless of whether the streets are wet or not. </p>
+<p>Many people find this unsettling. I did myself for some time. But now it seems
+very natural to me. Rather than ask about the truth of a proposition, let me
+tweak it slightly. Suppose I tell you &quot;if it is raining then I wear rubber
+boots&quot;. <em>Under what circumstances could you reasonably call me a liar?</em> If it
+is raining and I am not wearing rubber boots then clearly I am a liar. If it
+is raining and I am wearing rubber boots then clearly I am not a liar. If it
+is not raining then you have nothing upon which to deduce that I am a liar; my
+statement is true.</p>
+<p>So what does this have to do with programming languages?</p>
+<p>I now think of material implication like this:</p>
+<pre><code class="language-c">if (p)
+{
+    debug.assert(q);
+    ...
+}
+</code></pre>
+<p>We will say that the program is correct (true) if the assertion never fires
+and incorrect (false) if the assertion fires. Under what circumstances would
+we say that the program is incorrect? Only if p is true and q is false. If p
+is false then the assertion never fires, and if both are true then the
+assertion never fires. So again, it makes sense to say that P -&gt; Q is true
+when P is false.</p>
+
+    </div>
+    </div>
+    <div class="footnote">
+        <a href="/">Back to Home</a>
+    </div>
+    <script>
+        // Generate table of contents
+        function generateTOC() {
+            const content = document.querySelector('.content');
+            const toc = document.querySelector('.toc-nav');
+            const headings = content.querySelectorAll('h1, h2, h3, h4, h5, h6');
+            
+            if (headings.length === 0) {
+                document.querySelector('.sidebar').style.display = 'none';
+                return;
+            }
+
+            const ul = document.createElement('ul');
+            headings.forEach((heading, index) => {
+                // Add ID to heading if it doesn't have one
+                if (!heading.id) {
+                    heading.id = `heading-${index}`;
+                }
+
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.href = `#${heading.id}`;
+                a.textContent = heading.textContent;
+                a.style.paddingLeft = `${(parseInt(heading.tagName[1]) - 1) * 0.5}rem`;
+                li.appendChild(a);
+                ul.appendChild(li);
+            });
+            toc.appendChild(ul);
+        }
+
+        // Initialize syntax highlighting
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('pre code').forEach((block) => {
+                hljs.highlightElement(block);
+            });
+            generateTOC();
+
+            // Mobile TOC toggle
+            const tocToggle = document.querySelector('.toc-toggle');
+            const sidebar = document.querySelector('.sidebar');
+            
+            tocToggle.addEventListener('click', () => {
+                sidebar.classList.add('active');
+            });
+
+            // Close TOC when clicking a link on mobile
+            document.querySelector('.toc-nav').addEventListener('click', (e) => {
+                if (window.innerWidth <= 768 && e.target.tagName === 'A') {
+                    sidebar.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
