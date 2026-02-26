@@ -1,28 +1,30 @@
 /* Base styles */
 body {
-    font-family: Garamond, Georgia, serif;
+    font-family: 'Source Serif 4', Georgia, serif;
     max-width: 800px;
     margin: 2rem auto;
     padding: 0 20px;
     background-color: #fff;
     color: #333;
-    line-height: 1.6;
+    line-height: 1.75;
+    font-size: 18px;
 }
 
 /* Headers */
 h1, h2 {
-    font-family: Garamond, Georgia, serif;
+    font-family: 'Playfair Display', Georgia, serif;
     color: #2c3e50;
+    letter-spacing: -0.02em;
 }
 
 h1 {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2.6rem;
     margin-bottom: 2rem;
 }
 
 h2 {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
     margin-bottom: 1.5rem;
     color: #34495e;
 }
@@ -37,15 +39,15 @@ h2 {
 .posts-list li {
     display: flex;
     align-items: baseline;
-    /* margin-bottom: 0.8rem; */
-    line-height: 1.2;
+    line-height: 1.3;
 }
 
 .post-date {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     color: #666;
     flex-shrink: 0;
     width: 100px;
+    font-size: 0.9rem;
 }
 
 .post-separator {
@@ -54,7 +56,7 @@ h2 {
 }
 
 .post-title {
-    font-family: Garamond, Georgia, serif;
+    font-family: 'Source Serif 4', Georgia, serif;
     text-decoration: none;
     color: #2c3e50;
 }
@@ -76,6 +78,7 @@ h2 {
 }
 
 .metadata {
+    font-family: 'Inter', system-ui, sans-serif;
     font-size: 0.9rem;
     color: #666;
 }
@@ -100,8 +103,9 @@ h2 {
     margin-right: 0.5rem;
     background-color: #e9ecef;
     border-radius: 15px;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: #495057;
+    font-family: 'Inter', system-ui, sans-serif;
 }
 
 .summary {
@@ -109,6 +113,7 @@ h2 {
     padding: 1rem;
     background-color: #f8f9fa;
     border-left: 4px solid #3498db;
+    font-family: 'Inter', system-ui, sans-serif;
 }
 
 .summary p {
@@ -145,7 +150,8 @@ h2 {
 .topics-list a {
     text-decoration: none;
     color: #3498db;
-    font-weight: bold;
+    font-weight: 600;
+    font-family: 'Inter', system-ui, sans-serif;
 }
 
 .topics-list a:hover {
@@ -158,25 +164,27 @@ pre {
     padding: 0;
     border-radius: 6px;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background: #0f172a;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 code {
-    font-family: 'Inconsolata', 'Monaco', 'Courier New', monospace;
+    font-family: 'JetBrains Mono', 'Fira Code', 'Inconsolata', monospace;
     font-size: 0.9rem;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 pre code {
     display: block;
     padding: 1rem;
     overflow-x: auto;
+    color: #e5e7eb;
 }
 
 /* Inline code styling */
 :not(pre) > code {
-    background-color: #f5f5f5;
+    background-color: #f1f5f9;
     padding: 0.2rem 0.4rem;
-    border-radius: 3px;
-    color: #e83e8c;
+    border-radius: 4px;
+    color: #be185d;
 }
